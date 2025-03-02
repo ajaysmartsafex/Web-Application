@@ -4,7 +4,7 @@ import resultsReducer from './resultsSlice';
 
 const store = configureStore({
     reducer: {
-        games: gamesReducer,
+        gameLists: gamesReducer,
         results: resultsReducer,
     },
 });

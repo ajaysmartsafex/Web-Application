@@ -1,3 +1,98 @@
-.body_color {
-    background-color: aqua;
+@import url('https://fonts.cdnfonts.com/css/helvetica-255');
+
+
+
+main {
+
+    font-family: 'Helvetica', sans-serif;
+
+    .panel_heading {
+        background-color: #3f51b5;
+        color: #fff;
+    }
+
+    .thead {
+        background-color: #ffc107;
+        text-shadow: 1px 1px 2px #9a7400ab;
+    }
+
+    .bg_transparent {
+        background-color: transparent;
+    }
+
+    .button {
+        background-color: #522f92;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        padding: 6px 12px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 800;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .game_name {
+        font-size: 22px;
+        color: #00094d;
+        text-shadow: 1px 1px 2px #fff;
+        font-style: italic;
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+    }
+
+    .game_number {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1;
+        background: -webkit-linear-gradient(#4500bf, #670009);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 5px 5px;
+        font-style: italic;
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        text-shadow: none;
+    }
+
+    .game_time {
+        font-size: 15px;
+        padding: 2px 0;
+        margin-bottom: 0;
+        color: #000;
+        text-shadow: 1px 1px 2px #ffd9d9;
+    }
+
+    .border_red_line {
+        display: flex;
+        border: 3px solid #ff0016 !important;
+        color: #000;
+        border-radius: 10px
+    }
+
+    .section_header {
+        max-width: 100%;
+        margin: 7px auto;
+        text-align: center;
+        background: #ff0016;
+        padding: 5px 10px;
+        text-shadow: 1px 1px 2px #000;
+        display: block;
+        color: #ffd700;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        border: 2px solid #fff;
+        border-radius: .75em;
+        transform-style: preserve-3d;
+        font-family: Helvetica, sans-serif;
+    }
+
+    .game_card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import './index.css';
 import store from './store/store.js';
 import App from './App.js';
 import Home from './pages/Home.jsx';
+import ResultDetail from './pages/ResultDetail';
+import ResultJodi from './pages/ResultJodi';
+
 
 const router = createBrowserRouter([
     {
@@ -16,8 +20,12 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: '*',
-                element: <h2>404 - Not Found</h2>,
+                path: "result/:gameName/jodi",
+                element: <ResultJodi />,
+            },
+            {
+                path: "result/:gameName/panel",
+                element: <ResultDetail />,
             },
         ],
     },

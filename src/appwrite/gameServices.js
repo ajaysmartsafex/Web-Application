@@ -1,5 +1,5 @@
 import conf from "../conf/conf";
-import { Client, Databases, Query } from "appwrite";
+import { Client, Databases } from "appwrite";
 
 export class gameServices {
 
@@ -28,8 +28,7 @@ export class gameServices {
         try {
             const response = await this.database.listDocuments(
                 conf.appwriteDatabaseId,
-                conf.appwriteCollectionId,
-                [Query.equal("status", ["active"])]
+                conf.appwriteCollectionId
             )
             return response;
         } catch (error) {

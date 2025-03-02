@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import "../src/assets/custom.scss";
 import { Outlet } from 'react-router-dom';
 
 
