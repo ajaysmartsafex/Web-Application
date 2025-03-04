@@ -1,95 +1,97 @@
-import React, { useEffect } from "react";
-import Container from "./container/Container";
-import { Link } from "react-router-dom";
-import { Button } from "../components"
-import appwriteGameService from "../appwrite/gameServices";
-import appwriteResultService from "../appwrite/resultServices";
-import { setGameDate } from "../store/gamesSlice";
-import { setGameResults } from "../store/resultsSlice";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import Container from './container/Container';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from '.';
+import appwriteGameService from '../appwrite/gameServices';
+import { setGameDate } from '../store/gamesSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
-function LiveResult() {
+const LiveResult = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const gameData = useSelector((state) => state.gameLists.gameData);
+  const [filteredGames, setFilteredGames] = useState([]);
 
-    const dispatch = useDispatch();
-    const gameData = useSelector((state) => state.gameLists.gameData);
-    const gameResults = useSelector((state) => state.results.gameResults);
+  const handleRefresh = () => {
+    navigate(0); 
+  };
 
-    useEffect(() => {
-        const fetchResults = async () => {
-            try {
-                // Fetch games
-                const gamesResponse = await appwriteGameService.getGames();
-                if (gamesResponse?.documents) {
-                    const sortedGames = gamesResponse.documents.sort((a, b) => {
-                        const timeA = new Date(`1970-01-01T${a.starttime}`);
-                        const timeB = new Date(`1970-01-01T${b.starttime}`);
-                        return timeA - timeB;
-                    });
-                    dispatch(setGameDate(sortedGames));
-                } else {
-                    console.warn("No game documents found in response");
-                }
+  useEffect(() => {
+    const fetchResults = async () => {
+      try {
+        const gamesResponse = await appwriteGameService.getGames();
+        if (gamesResponse?.documents) {
+          const sortedGames = gamesResponse.documents.sort((a, b) => {
+            const timeA = new Date(`1970-01-01T${a.starttime}`);
+            const timeB = new Date(`1970-01-01T${b.starttime}`);
+            return timeA - timeB;
+          });
+          dispatch(setGameDate(sortedGames));
+        } else {
+          console.warn('No game documents found in response');
+        }
+      } catch (error) {
+        console.error('Error fetching results:', error);
+      }
+    };
 
-                // Fetch game results
-                const resultsResponse = await appwriteResultService.getResults();
-                if (resultsResponse?.documents) {
-                    dispatch(setGameResults(resultsResponse.documents));
-                } else {
-                    console.warn("No result documents found in response");
-                }
+    fetchResults();
+  }, [dispatch]);
 
-            } catch (error) {
-                console.error("Error fetching results:", error);
-            }
-        };
+  useEffect(() => {
+    const now = new Date();
+    const currentTime = now.getTime();
+    const filtered = gameData.filter((game) => {
+      if (game.title === 'MAIN BAZAR') {
+        return true;
+      }
+      const startTime = new Date(game.starttime).getTime();
+      const endTime = new Date(game.endtime).getTime();
+      if (isNaN(startTime) || isNaN(endTime)) {
+        console.warn(`Invalid time for game: ${game.title}`, game);
+        return false;
+      }
+      const isOngoing = currentTime >= startTime && currentTime <= endTime;
+      return isOngoing;
+    });
 
-        fetchResults();
-    }, [dispatch]);
+    setFilteredGames(filtered.length > 0 ? filtered : gameData);
+  }, [gameData]);
 
-    return (
-        <div className='border_red_line w-full'>
-            <Container>
-                <div className='section_header'>☔ WORLD ME SABSE FAST SATTA MATKA RESULT ☔</div>
-                {gameData.length > 0 ? (
-                    gameData.map((game) => {
-                        const gameResult = gameResults.find(result => result.gameName === game.title);
-                        const gameName = gameResult ? gameResult.gameName : 'unknown-game';
-                        return (
-                            <div key={game.$id} className='game_card border p-4 rounded-lg mb-4 text-center'>
-                                <div>
-                                    <Link to={`/result/${gameName.replace(/\s+/g, '-').toLowerCase()}/jodi`}>
-                                        <Button className="button mr-3">
-                                            Jodi
-                                        </Button>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <h1 className='game_name text-xl font-bold'>{game.title}</h1>
-                                    <h2 className='game_number text-xl font-bold'>{game.gamenumber || 'N/A'}</h2>
-                                    <div className='game_time'>
-                                        (<span className='start_time'>{game.starttime}</span> -
-                                        <span className='end_time'>{game.endtime}</span>)
-                                    </div>
-                                    <h2 className='result_number text-xl font-bold red_text mt-2'>
-                                        Result: {game.status === 'active' ? 'Ongoing' : 'No result'}
-                                    </h2>
-                                </div>
-                                <div>
-                                    <Link to={`/result/${gameName.replace(/\s+/g, '-').toLowerCase()}/panel`}>
-                                        <Button className="button mr-3">
-                                            Panel
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        );
-                    })
-                ) : (
-                    <p>No games available</p>
-                )}
-            </Container>
-        </div>
-    );
-}
+  return (
+    <div className="border_red_line text-center">
+      <Container>
+        <div className="section_header">☔ Live Result ☔</div>
+        <h1 className="text-xl font-medium">
+          SAB SE TEZ RESULTS YAHI MILEGA
+          <br /> <span className="red_color">dp</span>
+          <span className="black_color">bossess.com</span>
+        </h1>
+        {filteredGames.length > 0 ? (
+          filteredGames.map((game) => {
+            return (
+              <div
+                key={game.$id}
+                className="grid grid-cols-1 border-b border-red-600 p-4 mb-4 text-center"
+              >
+                <h1 className="game_name text-xl font-bold">{game.title}</h1>
+                <h2 className="game_number text-xl font-bold">
+                  {game.gamenumber || 'N/A'}
+                </h2>
+                <Link to="#">
+                  <Button className="button mr-3" onClick={handleRefresh}>
+                    Refresh
+                  </Button>
+                </Link>
+              </div>
+            );
+          })
+        ) : (
+          <p>No games available</p>
+        )}
+      </Container>
+    </div>
+  );
+};
 
 export default LiveResult;

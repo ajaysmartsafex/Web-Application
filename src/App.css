@@ -28,6 +28,39 @@
   color: #61dafb;
 }
 
+.amthltg {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 5px;
+  height: 40px;
+}
+
+.amthltg p {
+  animation: amthltg 20s linear infinite; 
+  margin-top: 20px;
+  color: #000b65;
+}
+
+.amthltg p:hover {
+  animation-play-state: paused;
+
+}
+@keyframes amthltg {
+  from {
+    -moz-transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

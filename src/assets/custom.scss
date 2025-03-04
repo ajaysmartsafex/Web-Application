@@ -1,98 +1,329 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-255');
 
+.font_semibold {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.red_color {
+  color: #ff0016;
+}
+.black_color {
+  color: #000;
+}
+.blue_color {
+  color: #001699;
+}
+.yellow_color {
+  color: #ffd700;
+}
+.bg_yellow_color {
+  background-color: #ffd700;
+}
+.marun_color {
+  color: #9b0000;
+}
+.purpal_color {
+  color: #880e4f;
+}
+.grays_color {
+  color: #444;
+  text-shadow: 1px 1px 2px #fff;
+}
+.text_shadow {
+  text-shadow: 1px 1px 2px #000;
+}
+.text_shadow_white {
+  text-shadow: 1px 1px 2px #fff;
+}
+.text_shadow_red {
+  text-shadow: 1px 1px 2px #ff0016;
+}
+.text_shadow_blue {
+  text-shadow: 1px 1px 2px #001699;
+}
+.text_shadow_yellow {
+  text-shadow: 1px 1px 2px #ffd700;
+}
+.border_bottom {
+  border-bottom: 1px solid #ff0016;
+}
+.border_left {
+  border-left: 1px solid #ff0016;
+}
+.border_right {
+  border-right: 1px solid #ff0016;
+}
+.newst {
+  border-bottom: 1px solid #ff0016;
+}
+.date {
+  border-bottom: 1px solid #ff0016;
+  margin: 0 0px;
+  padding: 10px 5px;
+  border-radius: 0;
+  border-top-width: 0;
+  color: #000;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 22px;
+}
 
 main {
+  font-family: 'Helvetica', sans-serif;
+  font-style: italic;
+  .header_section {
+    :nth-child(1) {
+      font-size: 50px;
+      font-weight: 700;
+      text-shadow: 1px 1px 1px #000;
+    }
+    :nth-child(2) {
+      font-size: 30px;
+      font-weight: 700;
+      text-shadow: 1px 1px 1px #000;
+    }
+  }
 
-    font-family: 'Helvetica', sans-serif;
+  .panel_heading {
+    background-color: #3f51b5;
+    color: #fff;
+  }
 
-    .panel_heading {
-        background-color: #3f51b5;
+  .thead {
+    background-color: #ffc107;
+    text-shadow: 1px 1px 2px #9a7400ab;
+  }
+
+  .bg_transparent {
+    background-color: transparent;
+  }
+
+  .button {
+    background-color: #522f92;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .green-btn {
+    background: linear-gradient(#00d309, #004503);
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding: 7px;
+    border-radius: 10px;
+    clip-path: polygon(
+      0 0,
+      97% 0,
+      100% 48%,
+      100% 80%,
+      100% 100%,
+      3% 100%,
+      0 46%,
+      0 20%
+    );
+    color: #fff;
+    text-shadow: 1px 1px 2px red;
+  }
+
+  .game_name {
+    font-size: 22px;
+    color: #00094d;
+    text-shadow: 1px 1px 2px #fff;
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .game_number {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1;
+    background: -webkit-linear-gradient(#4500bf, #670009);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 5px;
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    text-shadow: none;
+  }
+
+  .game_time {
+    font-size: 15px;
+    padding: 2px 0;
+    margin-bottom: 0;
+    color: #000;
+    text-shadow: 1px 1px 2px #ffd9d9;
+  }
+
+  .border_red_line {
+    border: 2px solid #ff0016 !important;
+    color: #000;
+    border-radius: 0.75em;
+    margin: 8px;
+    padding: 0;
+    font-weight: 700;
+  }
+
+  .section_header {
+    max-width: 100%;
+    margin: 0px auto 8px;
+    text-align: center;
+    background: #ff0016;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 2px #000;
+    display: block;
+    color: #ffd700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border: 2px solid #fff;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+  .game_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table_container {
+    .charts_heading {
+      max-width: 100%;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+      display: block;
+      color: #ffd700;
+      letter-spacing: 1px;
+      font-weight: 700;
+      transform-style: preserve-3d;
+      font-family: Helvetica, sans-serif;
+      font-size: 20px;
+      background-color: #ff0016;
+      border-radius: 0.75em;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    table {
+      width: 100%;
+      border: 1px solid navy;
+      thead th {
+        padding: 5px 2px;
+        background: navy;
+        border: 0;
         color: #fff;
-    }
+      }
 
-    .thead {
-        background-color: #ffc107;
-        text-shadow: 1px 1px 2px #9a7400ab;
-    }
-
-    .bg_transparent {
-        background-color: transparent;
-    }
-
-    .button {
-        background-color: #522f92;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        padding: 6px 12px;
+      td {
+        border: 1px solid navy;
         text-align: center;
-        display: inline-block;
-        font-size: 14px;
-        font-weight: 800;
-        margin: 4px 2px;
-        cursor: pointer;
+      }
     }
+  }
+}
 
-    .game_name {
-        font-size: 22px;
-        color: #00094d;
-        text-shadow: 1px 1px 2px #fff;
-        font-style: italic;
-        font-family: Helvetica, sans-serif;
-        font-weight: 700;
+.kalyan_cont {
+  .om {
+    // border: 1px inset #ff0016;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    text-shadow: 2px 1px gold;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .klyanbzr {
+    font-size: 35px;
+    color: red;
+  }
+  .tahlka {
+    font-size: 50px;
+    color: #00f;
+  }
+  .specialofr {
+    font-size: 33px;
+    color: red;
+  }
+  .labhdayak {
+    font-size: 20px;
+    color: #000;
+  }
+}
+.table_cont {
+  background-color: #ff0;
+  border: 5px dashed navy;
+  margin: 8px;
+  color: #000;
+  .bg_yellow_color {
+    position: relative;
+    table {
+      th {
+        border: 1px solid #444;
+      }
+      td {
+        border: 1px solid #444;
+      }
     }
+  }
+}
 
-    .game_number {
-        margin: 0;
-        font-size: 22px;
-        line-height: 1;
-        background: -webkit-linear-gradient(#4500bf, #670009);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding: 5px 5px;
-        font-style: italic;
-        font-family: Helvetica, sans-serif;
-        font-weight: 700;
-        text-shadow: none;
+.flexdesign {
+  display: flex;
+  flex-wrap: wrap;
+  .io {
+    max-width: 100%;
+    width: 50%;
+    .font35 {
+      font-size: 35px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #ff0016;
+      border-top: 0;
     }
-
-    .game_time {
-        font-size: 15px;
-        padding: 2px 0;
-        margin-bottom: 0;
-        color: #000;
-        text-shadow: 1px 1px 2px #ffd9d9;
+    .green-btn {
+      background: linear-gradient(#00d309, #004503);
+      font-size: 22px;
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: 5px;
+      padding: 7px;
+      border-radius: 10px;
+      clip-path: polygon(
+        0 0,
+        97% 0,
+        100% 48%,
+        100% 80%,
+        100% 100%,
+        3% 100%,
+        0 46%,
+        0 20%
+      );
+      color: #fff;
+      text-shadow: 1px 1px 2px red;
     }
-
-    .border_red_line {
-        display: flex;
-        border: 3px solid #ff0016 !important;
-        color: #000;
-        border-radius: 10px
-    }
-
-    .section_header {
-        max-width: 100%;
-        margin: 7px auto;
-        text-align: center;
-        background: #ff0016;
-        padding: 5px 10px;
-        text-shadow: 1px 1px 2px #000;
-        display: block;
-        color: #ffd700;
-        margin-bottom: 5px;
-        letter-spacing: 1px;
-        font-weight: 700;
-        border: 2px solid #fff;
-        border-radius: .75em;
-        transform-style: preserve-3d;
-        font-family: Helvetica, sans-serif;
-    }
-
-    .game_card {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  }
+  .io.font35:nth-child(odd) {
+    border-width: 1px 0px 1px 1px;
+    border-color: green;
+  }
+  .io.font35:nth-child(even) {
+    border-width: 1px 1px 1px 1px;
+    border-color: green;
+}
+  .navyfonts {
+    font-size: 20px;
+    line-height: 24px;
+    color: #1a237e;
+    font-weight: 600;
+  }
 }
