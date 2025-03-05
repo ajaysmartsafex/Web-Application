@@ -77,9 +77,6 @@ const formatEndTime = (endtime) => {
   return date.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', ...options });
 };
 
-
-
-
   return (
     <div className="border_red_line">
       <Container>

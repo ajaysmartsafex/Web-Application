@@ -5,11 +5,11 @@ const SattaMatka = () => {
   return (
     <div className="satta_matka_section border_red_line text-center">
       <Container>
-        <h3>
+        <h3 className="font-bold text-lg pt-3">
           Satta Matka <span className="red_color">DP</span>
           <span className="black_color">BOSSESS.COM</span> Kalyan Matka Result
         </h3>
-        <p className="grays_color text-sm">
+        <p className="grays_color text-sm p-3">
           <span className="red_color">DP</span>
           <span className="black_color">BOSSESS.com</span> is the No. 1 Matka
           Sites welcomes you full-heartedly. Here below you can find the perfect

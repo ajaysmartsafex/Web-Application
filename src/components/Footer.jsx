@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         <div className="border_red_line">
           <Container>
-            <p class="powerd_by text-sm text-center marun_color py-3">
+            <p className="powerd_by text-sm text-center marun_color py-3">
               © 2011 - 2025 dpbossess.com <br />
               <Link
                 href="#"

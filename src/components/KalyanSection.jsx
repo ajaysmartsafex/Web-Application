@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './container/Container';
+import Kuberaya from '../assets/kuberaya.jpg';
 
 const KalyanSection = () => {
   return (
@@ -12,12 +13,7 @@ const KalyanSection = () => {
         <div align="center" className="result fntsnm">
           <div>
             <div>&nbsp;</div>
-            <img
-              src="https://dpbossess.com/kuberaya.jpg"
-              alt=""
-              height="200px"
-              width="200px"
-            />
+            <img src={Kuberaya} alt="" height="200px" width="200px" />
             <div className="om text_shadow_yellow font-semibold">
               || ॐ कुबेराय नम: ||
               <br />
