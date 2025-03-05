@@ -11,52 +11,52 @@ const MatkaPanelChart = () => {
         </h3>
 
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya/panel" className="text-xl blue_color">
             SURYA Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/time-baza/panel" className="text-xl blue_color">
             TIME BAZAR Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/milan-day/panel" className="text-xl blue_color">
             MILAN DAY Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya-day/panel" className="text-xl blue_color">
             SURYA DAY Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/kalyan/panel" className="text-xl blue_color">
             KALYAN Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya-night/panel" className="text-xl blue_color">
             SURYA NIGHT Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/milan-night/panel" className="text-xl blue_color">
             MILAN NIGHT Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/sridevi/panel" className="text-xl blue_color">
             SRIDEVI Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/sridevi-night/panel" className="text-xl blue_color">
             SRIDEVI NIGHT Panel
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/main-bazar/panel" className="text-xl blue_color">
             MAIN BAZAR Panel
           </Link>
         </div>

@@ -169,10 +169,14 @@ const ResultJoid = () => {
     <div className="jodi_chart">
       <Container>
         <div className="border_red_line">
-          <h2 className="w-full flex items-center justify-center">
-            <span className="red_color text-2xl font-bold">Dp</span>
-            <span className="black_color text-2xl font-bold">bossess.com</span>
-          </h2>
+          <Link to="/">
+            <h2 className="w-full flex items-center justify-center">
+              <span className="red_color text-2xl font-bold">Dp</span>
+              <span className="black_color text-2xl font-bold">
+                bossess.com
+              </span>
+            </h2>
+          </Link>
         </div>
         <div className="section_header text-white uppercase text-sm">
           {userData.title} JODI CHART

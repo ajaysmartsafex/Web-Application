@@ -11,52 +11,52 @@ const MatkaJodiChart = () => {
         </h3>
 
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya/jodi" className="text-xl blue_color">
             SURYA Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/time-bazar/jodi" className="text-xl blue_color">
             TIME BAZAR Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/milan-day/jodi" className="text-xl blue_color">
             MILAN DAY Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya-day/jodi" className="text-xl blue_color">
             SURYA DAY Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/kalyan/jodi" className="text-xl blue_color">
             KALYAN Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/surya-night/jodi" className="text-xl blue_color">
             SURYA NIGHT Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/milan-night/jodi" className="text-xl blue_color">
             MILAN NIGHT Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/sridevi/jodi" className="text-xl blue_color">
             SRIDEVI Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/sridevi-night/jodi" className="text-xl blue_color">
             SRIDEVI NIGHT Chart
           </Link>
         </div>
         <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="#" className="text-xl blue_color">
+          <Link to="/result/main-bazar/jodi" className="text-xl blue_color">
             MAIN BAZAR Chart
           </Link>
         </div>
