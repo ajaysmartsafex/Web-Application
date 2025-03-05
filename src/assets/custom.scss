@@ -1,5 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-255');
 
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+}
+
 .font_semibold {
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +18,9 @@
 }
 .blue_color {
   color: #001699;
+}
+.dark_blue_color {
+    color: #00094d !important;
 }
 .yellow_color {
   color: #ffd700;
@@ -45,6 +53,9 @@
 .text_shadow_yellow {
   text-shadow: 1px 1px 2px #ffd700;
 }
+.border_top {
+  border-top: 1px solid #ff0016;
+}
 .border_bottom {
   border-bottom: 1px solid #ff0016;
 }
@@ -56,6 +67,35 @@
 }
 .newst {
   border-bottom: 1px solid #ff0016;
+  .tg {
+    color: #00f;
+    font-style: italic;
+    font-family: trebuchet ms, Arial, Helvetica, sans-serif !important;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .tt {
+    color: red;
+    font-family: Times New Roman;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .bolditc {
+    font-size: 18px;
+    color: green;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    .redb {
+      color: red;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
 }
 .date {
   border-bottom: 1px solid #ff0016;
@@ -169,18 +209,15 @@ main {
     border-radius: 0.75em;
     margin: 8px;
     padding: 0;
-    font-weight: 700;
   }
 
   .section_header {
     max-width: 100%;
-    margin: 0px auto 8px;
     text-align: center;
     background: #ff0016;
     padding: 5px 10px;
     text-shadow: 1px 1px 2px #000;
     display: block;
-    color: #ffd700;
     margin-bottom: 5px;
     letter-spacing: 1px;
     font-weight: 700;
@@ -189,6 +226,7 @@ main {
     transform-style: preserve-3d;
     font-family: Helvetica, sans-serif;
     font-size: 20px;
+    margin: 8px;
   }
 
   .game_card {
@@ -319,11 +357,83 @@ main {
   .io.font35:nth-child(even) {
     border-width: 1px 1px 1px 1px;
     border-color: green;
-}
+  }
   .navyfonts {
     font-size: 20px;
     line-height: 24px;
     color: #1a237e;
     font-weight: 600;
+  }
+}
+.introduction_cont {
+  p {
+    font-size: 12px;
+    font-style: normal;
+    padding: 8px;
+    text-transform: capitalize;
+    opacity: 0.9;
+  }
+  h2 {
+    text-transform: uppercase;
+    color: #0013a5;
+    text-shadow: 1px 1px 2px #fff;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 3px 0;
+    display: block;
+  }
+}
+.introduction_cont_second {
+  max-height: 250px;
+  overflow: auto;
+  h2 {
+    text-transform: uppercase;
+    color: #0013a5;
+    text-shadow: 1px 1px 2px #fff;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 3px 0;
+    display: block;
+  }
+  p {
+    font-size: 12px;
+    font-style: normal;
+    padding: 8px;
+    text-transform: capitalize;
+    opacity: 0.9;
+  }
+}
+.introduction_cont_third {
+  h2 {
+    text-transform: uppercase;
+    color: #0013a5;
+    text-shadow: 1px 1px 2px #fff;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 3px 0;
+    display: block;
+  }
+  p {
+    font-size: 12px;
+    font-style: normal;
+    padding: 8px;
+    text-transform: capitalize;
+    opacity: 0.9;
+  }
+}
+.foote_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  a {
+    display: flex;
+    border: 1px solid #686868;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 0 10px;
+    font-size: 12px;
+    line-height: 24px;
   }
 }

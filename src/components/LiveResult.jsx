@@ -61,7 +61,7 @@ const LiveResult = () => {
   return (
     <div className="border_red_line text-center">
       <Container>
-        <div className="section_header">☔ Live Result ☔</div>
+        <div className="section_header yellow_color">☔ Live Result ☔</div>
         <h1 className="text-xl font-medium">
           SAB SE TEZ RESULTS YAHI MILEGA
           <br /> <span className="red_color">dp</span>
@@ -72,7 +72,7 @@ const LiveResult = () => {
             return (
               <div
                 key={game.$id}
-                className="grid grid-cols-1 border-b border-red-600 p-4 mb-4 text-center"
+                className="grid grid-cols-1 p-4 mb-4 text-center"
               >
                 <h1 className="game_name text-xl font-bold">{game.title}</h1>
                 <h2 className="game_number text-xl font-bold">

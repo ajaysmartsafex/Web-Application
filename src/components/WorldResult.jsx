@@ -83,7 +83,7 @@ const formatEndTime = (endtime) => {
   return (
     <div className="border_red_line">
       <Container>
-        <div className="section_header">
+        <div className="section_header yellow_color">
           ☔ WORLD ME SABSE FAST SATTA MATKA RESULT ☔
         </div>
         {gameData.length > 0 ? (

@@ -5,7 +5,10 @@ const KalyanSection = () => {
   return (
     <div className="kalyan_cont border_red_line text-center">
       <Container>
-        <div className="section_header">⇛कल्याण पासिंग प्रूफ</div>
+        <div className="section_header">
+          <span className="text-white pr-2">⇛</span>
+          <span className="black_color">कल्याण पासिंग प्रूफ</span>
+        </div>
         <div align="center" className="result fntsnm">
           <div>
             <div>&nbsp;</div>
@@ -15,34 +18,35 @@ const KalyanSection = () => {
               height="200px"
               width="200px"
             />
-            <div className="om">
+            <div className="om text_shadow_yellow font-semibold">
               || ॐ कुबेराय नम: ||
               <br />
               ADMIN SIR की पेशकश
             </div>
-            <div className="klyanbzr">
-              <hr />
+            <div className="klyanbzr text_shadow_yellow font-semibold border_bottom border_top py-3">
               कल्याण बाज़ार मैं तहलका मचाने आ गया
-              <hr />
             </div>
-            <div className="tahlka"> तहलका जोड़भाव </div>
+            <div className="tahlka text_shadow_yellow font-semibold py-3">
+              {' '}
+              तहलका जोड़भाव{' '}
+            </div>
 
-            <div className="bg_yellow_color py-3">
+            <div className="bg_yellow_color text_shadow_yellow font-semibold border_bottom border_top py-3">
               <div className="specialofr">आज के लिए स्पेशल </div>
               <div className="labhdayak">केवल कल्याण बाज़ार के लिए लाभदायक</div>
             </div>
           </div>
           <div className="text-center py-3">
-            <div className="purpal_color text-2xl text_shadow_yellow">
+            <div className="purpal_color text_shadow_yellow font-semibold text-2xl text_shadow_yellow">
               दो जोड़ी पैनल सहित <br />
               एडवांस मात्र 3100/- <br />
             </div>
-            <div className="text-white text-2xl text_shadow">
+            <div className="text-white font-semibold text-2xl text_shadow">
               बुकिंग करने के लिए संपर्क करें:-
               <br />
               ♤ ADMIN SIR ♤<br />
             </div>
-            <div className="text-white text-3xl text_shadow">
+            <div className="text-white font-semibold text-3xl text_shadow">
               +919076916189
               <br />
             </div>

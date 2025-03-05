@@ -7,27 +7,27 @@ const Notice = () => {
     <>
       <div className="border_red_line">
         <Container>
-          <div className="section_header">☆ NOTICE ☆</div>
+          <div className="section_header yellow_color">☆ NOTICE ☆</div>
           <div className="text-center">
-            <h1 className="py-2 text-xl">
-              अपना बाजार dpbossess.com वेबसाइट में डलवाने के लिए आज ही हमें ईमेल
-              करें
+            <h1 className="py-2 text-base font-bold">
+              अपना बाजार dpbossess.com वेबसाइट में डलवाने <br />
+              के लिए आज ही हमें ईमेल करें
             </h1>
             <Link
               href="#"
-              className="py-2 text-2xl marun_color"
+              className="py-2 text-base font-bold blue_color"
               target="_blank"
               rel="noopener noreferrer"
             >
               Email : support@dpbossess.com
             </Link>
-            <h1 className="py-2 text-xl">शर्ते लागु</h1>
+            <h1 className="py-2 text-base font-bold">शर्ते लागु</h1>
           </div>
         </Container>
       </div>
       <div className="border_red_line">
         <Container>
-          <p className="grays_color text-sm text-center">
+          <p className="dark_blue_color text_shadow_white text-sm font-bold text-center p-2">
             KALYAN MATKA | MATKA RESULT | KALYAN MATKA TIPS | SATTA MATKA |
             MATKA.COM | MATKA PANA JODI TODAY | BATTA SATKA | MATKA PATTI JODI
             NUMBER | MATKA RESULTS | MATKA CHART | MATKA JODI | SATTA COM | FULL

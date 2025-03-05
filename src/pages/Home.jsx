@@ -18,6 +18,8 @@ import {
   FreeOpen,
   MatkaJodiChart,
   MatkaPanelChart,
+  Introduction,
+  Footer
 } from '../components';
 
 const Home = () => {
@@ -41,6 +43,8 @@ const Home = () => {
         <FreeOpen />
         <MatkaJodiChart />
         <MatkaPanelChart />
+        <Introduction />
+        <Footer />
       </Container>
     </div>
   );

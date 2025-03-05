@@ -16,6 +16,8 @@ import DailyGame from "./DailyGame.jsx";
 import FreeOpen from "./FreeOpen.jsx";
 import MatkaJodiChart from "./MatkaJodiChart.jsx";
 import MatkaPanelChart from "./MatkaPanelChart.jsx";
+import Introduction from "./Introduction.jsx";
+import Footer from "./Footer.jsx";
 
 import WorldResult from "./WorldResult.jsx";
 
@@ -38,5 +40,7 @@ export {
     DailyGame,
     FreeOpen,
     MatkaJodiChart,
-    MatkaPanelChart
+    MatkaPanelChart,
+    Introduction,
+    Footer
 }
