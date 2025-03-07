@@ -28,7 +28,8 @@ export class resultServices {
         try {
             const response = await this.datadase.listDocuments(
                 conf.appwriteDatabaseId,
-                conf.appwriteResultCollectionId
+                conf.appwriteResultCollectionId,
+                [Query.orderDesc("$createdAt")]
             )
             return response
         } catch (error) {

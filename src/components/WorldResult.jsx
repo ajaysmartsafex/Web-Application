@@ -82,13 +82,14 @@ const formatEndTime = (endtime) => {
       <Container>
         <div className="section_header yellow_color">
           ☔ WORLD ME SABSE FAST SATTA MATKA RESULT ☔
-        </div>
+        </div>      
         {gameData.length > 0 ? (
           gameData.map((game) => {
             const gameResult = gameResults.find(
               (result) => result.gameName === game.title
             );
             const gameName = gameResult ? gameResult.gameName : 'unknown-game';
+           
             return (
               <div
                 key={game.$id}
@@ -116,12 +117,10 @@ const formatEndTime = (endtime) => {
                     <span className="end_time">
                       {formatEndTime(game.endtime)}
                     </span>
-                  </div>
-                  {/* <h2 className="result_number text-xl font-bold red_text mt-2">
-                    Result: {game.status === 'active' ? 'Ongoing' : 'No result'}
-                  </h2> */}
+                  </div>                  
                 </div>
                 <div>
+                 
                   <Link
                     to={`/result/${gameName
                       .replace(/\s+/g, '-')

@@ -57,14 +57,15 @@ const ResultDetail = () => {
           });
 
           const getGameData = (gameName) => {
+           
             const game = sortedGames.find((game) => game.$id === gameName);
-            if (game) {
+            if (game) {              
               return {
                 title: game.title,
                 gamenumber: game.gamenumber,
               };
             }
-            return { title: 'Unknown Game', gamenumber: 'N/A' }; // Fallback
+            return { title: 'Unknown Game', gamenumber: 'N/A' }; 
           };
           const userDatas = getGameData(gameName);
           setUserData(userDatas);
@@ -107,7 +108,7 @@ const ResultDetail = () => {
             fourD: result.fourD || '*',
             fiveD: result.fiveD || '*',
             sixD: result.sixD || '*',
-            seveenD: result.seveenD || '*',
+            sevenD: result.sevenD || '*',
             eightD: result.eightD || '*',
           });
 
@@ -124,7 +125,7 @@ const ResultDetail = () => {
                 fourD: '*',
                 fiveD: '*',
                 sixD: '*',
-                seveenD: '*',
+                sevenD: '*',
                 eightD: '*',
               });
             }
@@ -279,7 +280,7 @@ const ResultDetail = () => {
                                       {entry.sixD}
                                     </p>
                                     <p className="text-sm font-bold none_itelic">
-                                      {entry.seveenD}
+                                      {entry.sevenD}
                                     </p>
                                     <p className="text-sm font-bold none_itelic">
                                       {entry.eightD}

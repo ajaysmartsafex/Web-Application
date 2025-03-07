@@ -111,7 +111,7 @@ const ResultJoid = () => {
             fourD: result.fourD || '*',
             fiveD: result.fiveD || '*',
             sixD: result.sixD || '*',
-            seveenD: result.seveenD || '*',
+            sevenD: result.sevenD || '*',
             eightD: result.eightD || '*',
           });
 
@@ -128,7 +128,7 @@ const ResultJoid = () => {
                 fourD: '*',
                 fiveD: '*',
                 sixD: '*',
-                seveenD: '*',
+                sevenD: '*',
                 eightD: '*',
               });
             }
