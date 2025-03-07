@@ -11,11 +11,11 @@ const SectionFour = () => {
           <div className="section_header yellow_color">Today Lucky Number</div>
           <div className="section_four grid grid-cols-1 sm:grid-cols-2 gap-4 justify-between items-center">
             <div className="text-center">
-              <h1 className="blue_color text-2xl">Golden Ank</h1>
+              <h1 className="blue_color text-2xl font-bold">Golden Ank</h1>
               <h2 className="purpal_color text-xl">0-5-1-6</h2>
             </div>
             <div className="text-center border-l-2 border-red-500">
-              <h1 className="blue_color text-2xl">Final Ank</h1>
+              <h1 className="blue_color text-2xl font-bold">Final Ank</h1>
               <div className="amthltg">
                 <p className="scroll-text text-xs">
                   MILAN MORNING - 0<br />
@@ -47,12 +47,12 @@ const SectionFour = () => {
 
       <div className="section_four_container border_red_line text-center">
         <Container>
-          <h1 className="py-2 text-xl">
+          <h1 className="py-2 text-xl font-bold">
             अब खेलिए ऑनलाइन सट्टा मटका सबसे भरोसेमंद वेबसाइट के साथ
           </h1>
           <Link
             href="#"
-            className="py-2 text-3xl marun_color"
+            className="py-2 text-3xl marun_color font-bold"
             target="_blank"
             rel="noopener noreferrer"
           >

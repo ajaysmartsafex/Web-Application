@@ -75,7 +75,16 @@ const formatEndTime = (endtime) => {
   };
 
   return date.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', ...options });
-};
+  };
+  
+
+  const specialGames = [
+    'surya',
+    'surya-day',
+    'surya-night',
+    'kalyan',
+    'main-bazar',
+  ];
 
   return (
     <div className="border_red_line">
@@ -93,7 +102,9 @@ const formatEndTime = (endtime) => {
             return (
               <div
                 key={game.$id}
-                className="game_card  p-4 border-b border-red-600 mb-4 text-center"
+                className={`game_card  p-4 border-b border-red-600 text-center ${
+                  specialGames.includes(game.$id) ? 'bg_yellow_color' : ''
+                }`}
               >
                 <div>
                   <Link
@@ -117,10 +128,9 @@ const formatEndTime = (endtime) => {
                     <span className="end_time">
                       {formatEndTime(game.endtime)}
                     </span>
-                  </div>                  
+                  </div>
                 </div>
                 <div>
-                 
                   <Link
                     to={`/result/${gameName
                       .replace(/\s+/g, '-')

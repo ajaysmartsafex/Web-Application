@@ -176,7 +176,7 @@ const ResultDetail = () => {
           </Link>
         </div>
         <div className="section_header text-white uppercase text-sm">
-          {userData.title} JODI CHART
+          {userData.title} PANEL CHART
         </div>
         <div className="border_red_line">
           <p className="dark_blue_color text_shadow_white text-sm font-bold text-center p-2">

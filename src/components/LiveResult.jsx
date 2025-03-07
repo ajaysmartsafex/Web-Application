@@ -62,7 +62,7 @@ const LiveResult = () => {
     <div className="border_red_line text-center">
       <Container>
         <div className="section_header yellow_color">☔ Live Result ☔</div>
-        <h1 className="text-xl font-medium">
+        <h1 className="text-xl font-bold font-sans">
           SAB SE TEZ RESULTS YAHI MILEGA
           <br /> <span className="red_color">dp</span>
           <span className="black_color">bossess.com</span>

@@ -14,15 +14,15 @@ const KalyanSection = () => {
           <div>
             <div>&nbsp;</div>
             <img src={Kuberaya} alt="" height="200px" width="200px" />
-            <div className="om text_shadow_yellow font-semibold">
+            <div className="om text_shadow_yellow font-bold">
               || ॐ कुबेराय नम: ||
               <br />
               ADMIN SIR की पेशकश
             </div>
-            <div className="klyanbzr text_shadow_yellow font-semibold border_bottom border_top py-3">
+            <div className="klyanbzr font-bold text_shadow_yellow border_bottom border_top py-3">
               कल्याण बाज़ार मैं तहलका मचाने आ गया
             </div>
-            <div className="tahlka text_shadow_yellow font-semibold py-3">
+            <div className="tahlka text_shadow_yellow font-bold py-3">
               {' '}
               तहलका जोड़भाव{' '}
             </div>
