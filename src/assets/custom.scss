@@ -1,22 +1,16 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-255');
-
-body {
-  font-family: Helvetica, sans-serif;
-  font-weight: 400;
-}
 .go_to_bottom {
-    background-color: #a0d5ff;
-    color: #220c82;
-    padding: 10px 30px;
-    font-size: 14px;
-    margin: 10px 0;
-    border: 2px solid #0000005c;
-    font-weight: 800;
-    text-decoration: none;
-    text-shadow: 1px 1px #00bcd4;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .2), 0 6px 8px 0 rgba(0, 0, 0, .19);
-    display: inline-block;
-    transition: all .3s;
+  background-color: #a0d5ff;
+  color: #220c82;
+  padding: 10px 30px;
+  font-size: 14px;
+  margin: 10px 0;
+  border: 2px solid #0000005c;
+  font-weight: 800;
+  text-decoration: none;
+  text-shadow: 1px 1px #00bcd4;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  transition: all 0.3s;
 }
 .font_semibold {
   font-weight: 600;
@@ -33,7 +27,7 @@ body {
   color: #001699;
 }
 .dark_blue_color {
-    color: #00094d !important;
+  color: #00094d !important;
 }
 .yellow_color {
   color: #ffd700;
@@ -250,6 +244,12 @@ main {
     justify-content: space-between;
     align-items: center;
   }
+  .world_result .game_card:last-child {
+    border-bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
   .table_container {
     .charts_heading {
       max-width: 100%;
@@ -283,9 +283,9 @@ main {
       }
     }
   }
-  .welcome_section{
+  .welcome_section {
     position: relative;
-    img{
+    img {
       border-radius: 10px;
     }
   }
@@ -457,5 +457,24 @@ main {
     border-radius: 0 10px;
     font-size: 12px;
     line-height: 24px;
+  }
+}
+@media (max-width: 500px) {
+  main .welcome_section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    .text-right {
+      text-align: center;
+    }
+  }
+  .foote_cont {
+    display: block;
+    a {
+      margin-bottom: 8px;
+    }
   }
 }

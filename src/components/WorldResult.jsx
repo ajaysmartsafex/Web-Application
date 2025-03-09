@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import Container from "./container/Container";
-import { Link } from "react-router-dom";
-import { Button } from "."
-import appwriteGameService from "../appwrite/gameServices";
-import appwriteResultService from "../appwrite/resultServices";
-import { setGameDate } from "../store/gamesSlice";
-import { setGameResults } from "../store/resultsSlice";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from 'react';
+import Container from './container/Container';
+import { Link } from 'react-router-dom';
+import { Button } from '.';
+import appwriteGameService from '../appwrite/gameServices';
+import appwriteResultService from '../appwrite/resultServices';
+import { setGameDate } from '../store/gamesSlice';
+import { setGameResults } from '../store/resultsSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 function WorldResult() {
   const dispatch = useDispatch();
@@ -44,39 +44,43 @@ function WorldResult() {
     fetchResults();
   }, [dispatch]);
 
-const formatStartTime = (starttime) => {
-  if (!starttime) {
-    return 'No time available';
-  }
+  const formatStartTime = (starttime) => {
+    if (!starttime) {
+      return 'No time available';
+    }
 
-  const date = new Date(starttime);
-  const options = {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
+    const date = new Date(starttime);
+    const options = {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    };
+
+    return date.toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      ...options,
+    });
   };
 
-  return date.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', ...options });
-};
+  const formatEndTime = (endtime) => {
+    if (!endtime) {
+      return 'No time available';
+    }
 
+    const date = new Date(endtime);
+    const options = {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    };
 
-const formatEndTime = (endtime) => {
-  if (!endtime) {
-    return 'No time available';
-  }
-
-  const date = new Date(endtime);
-  const options = {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
+    return date.toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      ...options,
+    });
   };
-
-  return date.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', ...options });
-  };
-  
 
   const specialGames = [
     'surya',
@@ -87,18 +91,18 @@ const formatEndTime = (endtime) => {
   ];
 
   return (
-    <div className="border_red_line">
+    <div className="world_result border_red_line">
       <Container>
         <div className="section_header yellow_color">
           ☔ WORLD ME SABSE FAST SATTA MATKA RESULT ☔
-        </div>      
+        </div>
         {gameData.length > 0 ? (
           gameData.map((game) => {
             const gameResult = gameResults.find(
               (result) => result.gameName === game.title
             );
             const gameName = gameResult ? gameResult.gameName : 'unknown-game';
-           
+
             return (
               <div
                 key={game.$id}
