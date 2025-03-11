@@ -18,8 +18,7 @@ export class gameServices {
                 conf.appwriteCollectionId,
                 slug
             )
-        } catch (error) {
-            console.log("Appwrite serive :: getGame :: error", error);
+        } catch (error) {           
             return false
         }
     }
@@ -28,12 +27,15 @@ export class gameServices {
         try {
             const response = await this.database.listDocuments(
                 conf.appwriteDatabaseId,
-                conf.appwriteCollectionId
+                conf.appwriteCollectionId,
+                [
+                //  Query.orderDesc("$createdAt"),
+                 Query.limit(1000000)
+                ]
             )
             return response;
-        } catch (error) {
-            console.error("Appwrite service :: getGames :: error", error);
-            return { documents: [] }; // Return empty array to prevent errors
+        } catch (error) {            
+            return { documents: [] };
         }
     }
 

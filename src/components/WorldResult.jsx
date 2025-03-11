@@ -125,13 +125,15 @@ function WorldResult() {
                     {game.gamenumber || 'N/A'}
                   </h2>
                   <div className="game_time flex gap-4">
-                    <span className="start_time">
+                    <span className="start_time end_time font-bold">
+                      {'('}
                       {formatStartTime(game.starttime)}
+                      {' - '}
+                      {formatEndTime(game.endtime)}
+                      {')'}
                     </span>
 
-                    <span className="end_time">
-                      {formatEndTime(game.endtime)}
-                    </span>
+                    {/* <span className="end_time"></span> */}
                   </div>
                 </div>
                 <div>

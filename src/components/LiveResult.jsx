@@ -5,6 +5,7 @@ import { Button } from '.';
 import appwriteGameService from '../appwrite/gameServices';
 import { setGameDate } from '../store/gamesSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { initSocket, closeSocket } from '../socket';
 
 const LiveResult = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,13 @@ const LiveResult = () => {
   const handleRefresh = () => {
     navigate(0);
   };
+
+  useEffect(() => {
+    initSocket();
+    return () => {
+      closeSocket();
+    };
+  }, []);
 
   useEffect(() => {
     const fetchResults = async () => {
@@ -77,9 +85,9 @@ const LiveResult = () => {
     return isOngoing;
   });
 
-  if (filteredGames.length === 0) {
-    console.log('No games available');
-  }
+  // if (filteredGames.length === 0) {
+  //   console.log('No games available');
+  // }
 
   return (
     <div className="border_red_line text-center">

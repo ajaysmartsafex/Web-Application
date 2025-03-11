@@ -20,7 +20,7 @@ export class resultServices {
             )
             return response.documents.length > 0 ? response.documents[0] : null;
         } catch (error) {
-            console.error("Error fetching single result:", error);
+            return false
         }
     }
 
@@ -29,12 +29,14 @@ export class resultServices {
             const response = await this.datadase.listDocuments(
                 conf.appwriteDatabaseId,
                 conf.appwriteResultCollectionId,
-                [Query.orderDesc("$createdAt")]
+                [
+                 Query.orderDesc("$createdAt"),
+                 Query.limit(1000000)
+                ]                
             )
             return response
-        } catch (error) {
-            console.error("Error fetching results:", error);
-            return { documents: [] }; // Return empty array to avoid errors
+        } catch (error) {            
+            return { documents: [] };
         }
     }
 
