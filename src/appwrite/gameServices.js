@@ -1,5 +1,5 @@
 import conf from "../conf/conf";
-import { Client, Databases } from "appwrite";
+import { Client, Databases, Query } from "appwrite";
 
 export class gameServices {
 
