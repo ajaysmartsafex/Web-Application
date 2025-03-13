@@ -9,13 +9,13 @@ import appwriteGameService from '../appwrite/gameServices';
 import { setGameDate } from '../store/gamesSlice';
 import { Container } from '../components/index';
 import {
+  startOfWeek,
+  endOfWeek,
+  getWeek,
+  getYear,
   format,
   parseISO,
-  getISOWeek,
-  getDay,
-  getYear,
-  startOfISOWeek,
-  endOfISOWeek,
+  addDays,
 } from 'date-fns';
 
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -91,18 +91,21 @@ const ResultJoid = () => {
       if (filteredResults.length > 0) {
         const grouped = filteredResults.reduce((acc, result) => {
           const date = parseISO(result.date);
-          const week = getISOWeek(date);
-          const year = getYear(date);
-          const weekKey = `${year}-${week}`;
-          const startDate = format(startOfISOWeek(date), 'dd-MM-yyyy');
-          const endDate = format(endOfISOWeek(date), 'dd-MM-yyyy');
-          const dayIndex = (getDay(date) + 6) % 7;
+          const startOfWeekDate = startOfWeek(date, { weekStartsOn: 1 });
+          const endOfWeekDate = endOfWeek(date, { weekStartsOn: 1 });
+          const midWeekDate = addDays(startOfWeekDate, 3);
+          const weekYear = getYear(midWeekDate);
+          const week = getWeek(startOfWeekDate, { weekStartsOn: 1 });
+          const weekKey = `${weekYear}-${week}`;
+          const startDate = format(startOfWeekDate, 'dd-MM-yyyy');
+          const endDate = format(endOfWeekDate, 'dd-MM-yyyy');
+          if (!acc[weekKey]) {
+            acc[weekKey] = { startDate, endDate, days: {} };
+            daysOfWeek.forEach((day) => (acc[weekKey].days[day] = []));
+          }
+          const dayIndex = (date.getDay() + 6) % 7; // Shift Sunday to end
           const dayName = daysOfWeek[dayIndex] || 'Mon';
 
-           if (!acc[weekKey]) {
-             acc[weekKey] = { startDate, endDate, days: {} };
-             daysOfWeek.forEach((day) => (acc[weekKey].days[day] = []));
-           }
           acc[weekKey].days[dayName].push({
             firstD: result.firstD || '*',
             secondD: result.secondD || '*',
@@ -235,8 +238,7 @@ const ResultJoid = () => {
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 px-4 py-2 font-bold text-center">
-                        {data.startDate.split('-').reverse().join('/')} <br />{' '}
-                        to <br /> {data.endDate.split('-').reverse().join('/')}
+                        {data.startDate} <br /> to <br /> {data.endDate}
                       </td>
                       {daysOfWeek.map((day) => (
                         <td
