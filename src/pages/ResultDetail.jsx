@@ -11,6 +11,7 @@ import {
   parseISO,
   getISOWeek,
   getDay,
+  getYear,
   startOfISOWeek,
   endOfISOWeek,
 } from 'date-fns';
@@ -91,17 +92,19 @@ const ResultDetail = () => {
         const grouped = filteredResults.reduce((acc, result) => {
           const date = parseISO(result.date);
           const week = getISOWeek(date);
+          const year = getYear(date);
+          const weekKey = `${year}-${week}`;
           const startDate = format(startOfISOWeek(date), 'dd-MM-yyyy');
           const endDate = format(endOfISOWeek(date), 'dd-MM-yyyy');
           const dayIndex = (getDay(date) + 6) % 7;
           const dayName = daysOfWeek[dayIndex] || 'Mon';
 
-          if (!acc[week]) {
-            acc[week] = { startDate, endDate, days: {} };
-            daysOfWeek.forEach((day) => (acc[week].days[day] = []));
-          }
+           if (!acc[weekKey]) {
+             acc[weekKey] = { startDate, endDate, days: {} };
+             daysOfWeek.forEach((day) => (acc[weekKey].days[day] = []));
+           }
 
-          acc[week].days[dayName].push({
+          acc[weekKey].days[dayName].push({
             firstD: result.firstD || '*',
             secondD: result.secondD || '*',
             thirdD: result.thirdD || '*',
@@ -232,8 +235,8 @@ const ResultDetail = () => {
                 </tr>
               </thead>
               <tbody>
-                {sortedWeeks.map(([week, data]) => (
-                  <React.Fragment key={week}>
+                {sortedWeeks.map(([weekKey, data]) => (
+                  <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 p-2 font-bold text-center text-sm none_itelic">
                         {data.startDate.split('-').reverse().join('/')} <br />{' '}
@@ -241,14 +244,14 @@ const ResultDetail = () => {
                       </td>
                       {daysOfWeek.map((day) => (
                         <td
-                          key={`${week}-${day}`}
+                          key={`${weekKey}-${day}`}
                           className="border border-gray-400 px-1 py-1 text-center none_itelic"
                         >
                           {data.days[day]?.length > 0 ? (
                             <div className="grid grid-cols-3 gap-2 text-center w-full">
                               <div className="left-digits flex flex-col items-center">
                                 {data.days[day].map((entry, index) => (
-                                  <div key={`left-${week}-${day}-${index}`}>
+                                  <div key={`left-${weekKey}-${day}-${index}`}>
                                     <p className="text-sm font-bold none_itelic">
                                       {entry.firstD}
                                     </p>
@@ -263,7 +266,7 @@ const ResultDetail = () => {
                               </div>
                               <div className="mid-digits font-bold flex items-center justify-center min-h-[60px]">
                                 {data.days[day].map((entry, index) => (
-                                  <div key={`mid-${week}-${day}-${index}`}>
+                                  <div key={`mid-${weekKey}-${day}-${index}`}>
                                     <span className="text-xl font-bold none_itelic">
                                       {entry.fourD}
                                     </span>
@@ -275,7 +278,7 @@ const ResultDetail = () => {
                               </div>
                               <div className="right-digits flex flex-col items-center">
                                 {data.days[day].map((entry, index) => (
-                                  <div key={`right-${week}-${day}-${index}`}>
+                                  <div key={`right-${weekKey}-${day}-${index}`}>
                                     <p className="text-sm font-bold none_itelic">
                                       {entry.sixD}
                                     </p>

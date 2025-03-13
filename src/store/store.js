@@ -7,6 +7,11 @@ const store = configureStore({
         gameLists: gamesReducer,
         results: resultsReducer,
     },
+     middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            immutableCheck: false,
+            serializableCheck: false,
+        }),
 });
 
 export default store;

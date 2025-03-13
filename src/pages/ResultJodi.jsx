@@ -13,6 +13,7 @@ import {
   parseISO,
   getISOWeek,
   getDay,
+  getYear,
   startOfISOWeek,
   endOfISOWeek,
 } from 'date-fns';
@@ -21,13 +22,10 @@ const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 const ResultJoid = () => {
   const [userData, setUserData] = useState({ title: '', gamenumber: '' });
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const { gameName: slug } = useParams();
   const gameName = decodeURIComponent(slug);
-
   const gameResults = useSelector((state) => state.results?.gameResults || []);
   const [groupedResults, setGroupedResults] = useState({});
 
@@ -94,17 +92,18 @@ const ResultJoid = () => {
         const grouped = filteredResults.reduce((acc, result) => {
           const date = parseISO(result.date);
           const week = getISOWeek(date);
+          const year = getYear(date);
+          const weekKey = `${year}-${week}`;
           const startDate = format(startOfISOWeek(date), 'dd-MM-yyyy');
           const endDate = format(endOfISOWeek(date), 'dd-MM-yyyy');
           const dayIndex = (getDay(date) + 6) % 7;
           const dayName = daysOfWeek[dayIndex] || 'Mon';
 
-          if (!acc[week]) {
-            acc[week] = { startDate, endDate, days: {} };
-            daysOfWeek.forEach((day) => (acc[week].days[day] = []));
-          }
-
-          acc[week].days[dayName].push({
+           if (!acc[weekKey]) {
+             acc[weekKey] = { startDate, endDate, days: {} };
+             daysOfWeek.forEach((day) => (acc[weekKey].days[day] = []));
+           }
+          acc[weekKey].days[dayName].push({
             firstD: result.firstD || '*',
             secondD: result.secondD || '*',
             thirdD: result.thirdD || '*',
@@ -232,8 +231,8 @@ const ResultJoid = () => {
                 </tr>
               </thead>
               <tbody>
-                {sortedWeeks.map(([week, data]) => (
-                  <React.Fragment key={week}>
+                {sortedWeeks.map(([weekKey, data]) => (
+                  <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 px-4 py-2 font-bold text-center">
                         {data.startDate.split('-').reverse().join('/')} <br />{' '}
@@ -241,14 +240,14 @@ const ResultJoid = () => {
                       </td>
                       {daysOfWeek.map((day) => (
                         <td
-                          key={`${week}-${day}`}
+                          key={`${weekKey}-${day}`}
                           className="border border-gray-400 px-4 py-2 text-center"
                         >
                           {data.days[day]?.length > 0 ? (
                             <div className="grid gap-2 text-center w-full">
                               <div className="mid-digits font-bold flex items-center justify-center min-h-[60px]">
                                 {data.days[day].map((entry, index) => (
-                                  <div key={`mid-${week}-${day}-${index}`}>
+                                  <div key={`mid-${weekKey}-${day}-${index}`}>
                                     <span className="text-2xl font-bold none_itelic">
                                       {entry.fourD}
                                     </span>
