@@ -225,7 +225,7 @@ const ResultJoid = () => {
             <table className="w-full border-collapse border border-gray-400">
               <thead>
                 <tr className="thead">
-                  <th className="border border-gray-400 px-4 py-2">Date</th>
+                  {/* <th className="border border-gray-400 px-4 py-2">Date</th> */}
                   {daysOfWeek.map((day) => (
                     <th key={day} className="border border-gray-400 px-4 py-2">
                       {day}
@@ -237,9 +237,9 @@ const ResultJoid = () => {
                 {sortedWeeks.map(([weekKey, data]) => (
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
-                      <td className="border border-gray-400 px-4 py-2 font-bold text-center">
+                      {/* <td className="border border-gray-400 px-4 py-2 font-bold text-center"> 
                         {data.startDate} <br /> to <br /> {data.endDate}
-                      </td>
+                      </td>*/}
                       {daysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
