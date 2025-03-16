@@ -240,7 +240,8 @@ const ResultDetail = () => {
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 p-2 font-bold text-center text-sm none_itelic">
-                        {data.startDate} <br /> to <br /> {data.endDate}
+                        {data.startDate.split('-').reverse().join('/')} <br />{' '}
+                        to <br /> {data.endDate.split('-').reverse().join('/')}
                       </td>
                       {daysOfWeek.map((day) => (
                         <td

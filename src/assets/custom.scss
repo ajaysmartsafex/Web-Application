@@ -463,6 +463,11 @@ main {
     line-height: 24px;
   }
 }
+
+span.start_time.end_time.font-bold {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 500px) {
   main .welcome_section {
     position: relative;
@@ -544,7 +549,6 @@ main {
     border-radius: 0;
   }
   thead tr th {
-    width: 55px;
     width: 55px;
     font-size: 11px;
     line-height: 5px;
