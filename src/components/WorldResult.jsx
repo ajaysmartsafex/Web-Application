@@ -131,9 +131,7 @@ function WorldResult() {
                       {' - '}
                       {formatEndTime(game.endtime)}
                       {')'}
-                    </span>
-
-                    {/* <span className="end_time"></span> */}
+                    </span>                   
                   </div>
                 </div>
                 <div>
