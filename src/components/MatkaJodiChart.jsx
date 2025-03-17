@@ -4,64 +4,46 @@ import { Link } from 'react-router-dom';
 
 const MatkaJodiChart = () => {
   return (
-    <Container>
-      <div className="table_container text-center px-3 my-3">
-        <h3 className="charts_heading text-center py-2 font-semibold">
+    <div className="section_four_container border_red_line">
+      <Container>
+        <div className="section_header yellow_color border_radius_12">
           ⇛ MATKA JODI CHART
-        </h3>
+        </div>
 
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya/jodi" className="text-xl blue_color">
+        <div className="font_semibold">
+          <Link to="/result/surya/jodi" className="lists_games">
             SURYA Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/time-bazar/jodi" className="text-xl blue_color">
+          <Link to="/result/time-bazar/jodi" className="lists_games">
             TIME BAZAR Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/milan-day/jodi" className="text-xl blue_color">
+          <Link to="/result/milan-day/jodi" className="lists_games">
             MILAN DAY Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya-day/jodi" className="text-xl blue_color">
+          <Link to="/result/surya-day/jodi" className="lists_games">
             SURYA DAY Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/kalyan/jodi" className="text-xl blue_color">
+          <Link to="/result/kalyan/jodi" className="lists_games">
             KALYAN Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya-night/jodi" className="text-xl blue_color">
+          <Link to="/result/surya-night/jodi" className="lists_games">
             SURYA NIGHT Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/milan-night/jodi" className="text-xl blue_color">
+          <Link to="/result/milan-night/jodi" className="lists_games">
             MILAN NIGHT Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/sridevi/jodi" className="text-xl blue_color">
+          <Link to="/result/sridevi/jodi" className="lists_games">
             SRIDEVI Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/sridevi-night/jodi" className="text-xl blue_color">
+          <Link to="/result/sridevi-night/jodi" className="lists_games">
             SRIDEVI NIGHT Chart
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/main-bazar/jodi" className="text-xl blue_color">
+          <Link to="/result/main-bazar/jodi" className="lists_games">
             MAIN BAZAR Chart
           </Link>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

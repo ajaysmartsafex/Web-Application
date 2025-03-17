@@ -180,10 +180,10 @@ const ResultJoid = () => {
             </h2>
           </Link>
         </div>
-        <div className="section_header text-white uppercase text-sm">
+        <div className="section_header text-white uppercase text-sm border_radius_head_0">
           {userData.title} JODI CHART
         </div>
-        <div className="border_red_line">
+        <div className="border_red_line border_radius_head_0">
           <p className="dark_blue_color text_shadow_white text-sm font-bold text-center p-2">
             MILAN MORNING JODI RESULT CHART RECORDS <br />
             suryamatkaonline.com MILAN MORNING jodi chart, MILAN MORNING jodi
@@ -200,7 +200,7 @@ const ResultJoid = () => {
             चार्ट, मिलान डे जोड़ी चार्ट
           </p>
         </div>
-        <div className="border_red_line text-center">
+        <div className="border_red_line text-center border_radius_head_0">
           <h1 className="game_name text-xl font-bold uppercase">
             {userData.title}
           </h1>
@@ -277,7 +277,7 @@ const ResultJoid = () => {
             Go To Top
           </button>
         </div>
-        <div className="border_red_line text-center">
+        <div className="border_red_line text-center border_radius_head_0">
           <h1 className="game_name text-xl font-bold uppercase">
             {userData.title}
           </h1>

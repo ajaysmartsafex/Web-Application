@@ -9,7 +9,7 @@ const SectionFour = () => {
       <div className="section_four_container border_red_line">
         <Container>
           <div className="section_header yellow_color">Today Lucky Number</div>
-          <div className="section_four grid grid-cols-1 sm:grid-cols-2 gap-4 justify-between items-center">
+          <div className="section_four grid grid-cols-2 sm:grid-cols-2 gap-4 justify-between items-center">
             <div className="text-center">
               <h1 className="blue_color text-2xl font-bold">Golden Ank</h1>
               <h2 className="purpal_color text-xl">0-5-1-6</h2>

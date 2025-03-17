@@ -4,65 +4,47 @@ import { Link } from 'react-router-dom';
 
 const MatkaPanelChart = () => {
   return (
-    <Container>
-      <div className="table_container text-center px-3 my-3">
-        <h3 className="charts_heading text-center py-2 font-semibold">
+    <div className="section_four_container border_red_line">
+      <Container>
+        <div className="section_header yellow_color border_radius_12">
           ⇛ MATKA PANEL CHART
-        </h3>
+        </div>
 
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya/panel" className="text-xl blue_color">
+        <div className="font_semibold">
+          <Link to="/result/surya/panel" className="lists_games">
             SURYA Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/time-baza/panel" className="text-xl blue_color">
+          <Link to="/result/time-baza/panel" className="lists_games">
             TIME BAZAR Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/milan-day/panel" className="text-xl blue_color">
+          <Link to="/result/milan-day/panel" className="lists_games">
             MILAN DAY Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya-day/panel" className="text-xl blue_color">
+          <Link to="/result/surya-day/panel" className="lists_games">
             SURYA DAY Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/kalyan/panel" className="text-xl blue_color">
+          <Link to="/result/kalyan/panel" className="lists_games">
             KALYAN Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/surya-night/panel" className="text-xl blue_color">
+          <Link to="/result/surya-night/panel" className="lists_games">
             SURYA NIGHT Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/milan-night/panel" className="text-xl blue_color">
+          <Link to="/result/milan-night/panel" className="lists_games">
             MILAN NIGHT Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/sridevi/panel" className="text-xl blue_color">
+          <Link to="/result/sridevi/panel" className="lists_games">
             SRIDEVI Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/sridevi-night/panel" className="text-xl blue_color">
+          <Link to="/result/sridevi-night/panel" className="lists_games">
             SRIDEVI NIGHT Panel
           </Link>
-        </div>
-        <div className="border_right border_left border_bottom font_semibold py-2">
-          <Link to="/result/main-bazar/panel" className="text-xl blue_color">
+          <Link to="/result/main-bazar/panel" className="lists_games">
             MAIN BAZAR Panel
           </Link>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
-}
+};
 
-export default MatkaPanelChart
+export default MatkaPanelChart;
