@@ -15,7 +15,6 @@ import {
   getYear,
   format,
   parseISO,
-  addDays,
 } from 'date-fns';
 
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -93,8 +92,10 @@ const ResultJoid = () => {
           const date = parseISO(result.date);
           const startOfWeekDate = startOfWeek(date, { weekStartsOn: 1 });
           const endOfWeekDate = endOfWeek(date, { weekStartsOn: 1 });
-          const midWeekDate = addDays(startOfWeekDate, 3);
-          const weekYear = getYear(midWeekDate);
+          const weekYear =
+            getYear(startOfWeekDate) === getYear(endOfWeekDate)
+              ? getYear(startOfWeekDate)
+              : getYear(endOfWeekDate);
           const week = getWeek(startOfWeekDate, { weekStartsOn: 1 });
           const weekKey = `${weekYear}-${week}`;
           const startDate = format(startOfWeekDate, 'dd-MM-yyyy');
@@ -106,7 +107,7 @@ const ResultJoid = () => {
           const dayIndex = (date.getDay() + 6) % 7; // Shift Sunday to end
           const dayName = daysOfWeek[dayIndex] || 'Mon';
 
-          acc[weekKey].days[dayName].push({
+          const entry = {
             firstD: result.firstD || '*',
             secondD: result.secondD || '*',
             thirdD: result.thirdD || '*',
@@ -115,7 +116,17 @@ const ResultJoid = () => {
             sixD: result.sixD || '*',
             sevenD: result.sevenD || '*',
             eightD: result.eightD || '*',
-          });
+          };
+
+          // Prevent duplicate entries
+          const isDuplicate = acc[weekKey].days[dayName].some(
+            (existingEntry) =>
+              JSON.stringify(existingEntry) === JSON.stringify(entry)
+          );
+
+          if (!isDuplicate) {
+            acc[weekKey].days[dayName].push(entry);
+          }
 
           return acc;
         }, {});
