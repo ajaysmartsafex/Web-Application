@@ -6,6 +6,7 @@ import appwriteResultService from '../appwrite/resultServices';
 import appwriteGameService from '../appwrite/gameServices';
 import { setGameDate } from '../store/gamesSlice';
 import { Container } from '../components/index';
+import LoadingImage from '../assets/loading.gif';
 import {
   startOfWeek,
   endOfWeek,
@@ -158,7 +159,7 @@ const ResultDetail = () => {
   const sortedWeeks = Object.entries(groupedResults).sort((a, b) => {
     const dateA = parseISO(a[1].startDate.split('-').reverse().join('-'));
     const dateB = parseISO(b[1].startDate.split('-').reverse().join('-'));
-    return dateB - dateA;
+    return dateA - dateB;
   });
 
   const handleRefresh = () => {
@@ -279,10 +280,10 @@ const ResultDetail = () => {
                               <div className="mid-digits font-bold flex items-center justify-center min-h-[60px]">
                                 {data.days[day].map((entry, index) => (
                                   <div key={`mid-${weekKey}-${day}-${index}`}>
-                                    <span className="text-xl font-bold none_itelic">
+                                    <span className="text-2xl font-bold none_itelic">
                                       {entry.fourD}
                                     </span>
-                                    <span className="text-xl font-bold none_itelic">
+                                    <span className="text-2xl font-bold none_itelic">
                                       {entry.fiveD}
                                     </span>
                                   </div>
@@ -315,7 +316,9 @@ const ResultDetail = () => {
               </tbody>
             </table>
           ) : (
-            <p>No results available</p>
+            <p className="flex justify-center items-center">
+              <img src={LoadingImage} alt="Loading..." />
+            </p>
           )}
           <button className="go_to_bottom" onClick={goToTop}>
             Go To Top

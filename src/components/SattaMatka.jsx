@@ -9,7 +9,7 @@ const SattaMatka = () => {
           Satta Matka <span className="red_color">DP</span>
           <span className="black_color">BOSSESS.COM</span> Kalyan Matka Result
         </h3>
-        <p className="grays_color text-sm p-3">
+        <p className="grays_color text-sm p-3 font-bold">
           <span className="red_color">DP</span>
           <span className="black_color">BOSSESS.com</span> is the No. 1 Matka
           Sites welcomes you full-heartedly. Here below you can find the perfect
