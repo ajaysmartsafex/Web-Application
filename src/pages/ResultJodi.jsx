@@ -240,7 +240,7 @@ const ResultJoid = () => {
                   {daysOfWeek.map((day) => (
                     <th
                       key={day}
-                      className="border border-gray-400 none_itelic"
+                      className="border border-gray-400 none_itelic py-1"
                     >
                       {day}
                     </th>

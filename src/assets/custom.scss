@@ -507,6 +507,12 @@ span.start_time.end_time.font-bold {
 }
 
 @media only screen and (max-width: 500px) {
+  main {
+    .panel_result_container,
+    .jodi_result {
+      width: 100% !important;
+    }
+  }
   .border_radius_head_0 {
     border-radius: 0 !important;
   }
@@ -577,12 +583,8 @@ span.start_time.end_time.font-bold {
   thead tr th {
     width: 55px;
     font-size: 11px;
-    line-height: 5px;
+    line-height: 11px;
   }
-  th {
-    font-size: 11px;
-  }
-
   .min-h-\[60px\] {
     min-height: auto !important;
   }

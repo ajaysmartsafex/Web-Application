@@ -235,11 +235,13 @@ const ResultDetail = () => {
             <table className="w-full border-collapse border border-gray-400">
               <thead>
                 <tr className="thead">
-                  <th className="border border-gray-400 none_itelic">Date</th>
+                  <th className="border border-gray-400 none_itelic py-1">
+                    Date
+                  </th>
                   {daysOfWeek.map((day) => (
                     <th
                       key={day}
-                      className="border border-gray-400 none_itelic"
+                      className="border border-gray-400 none_itelic py-1"
                     >
                       {day}
                     </th>
