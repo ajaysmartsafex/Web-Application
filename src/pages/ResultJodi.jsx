@@ -8,7 +8,7 @@ import appwriteResultService from '../appwrite/resultServices';
 import appwriteGameService from '../appwrite/gameServices';
 import { setGameDate } from '../store/gamesSlice';
 import { Container } from '../components/index';
-import  LoadingImage from '../assets/loading.gif';
+import LoadingImage from '../assets/loading.gif';
 import {
   startOfWeek,
   endOfWeek,
@@ -183,13 +183,11 @@ const ResultJoid = () => {
   return (
     <div className="jodi_chart">
       <Container>
-        <div className="border_red_line">
+        <div className="header_section border_red_line">
           <Link to="/">
             <h2 className="w-full flex items-center justify-center">
-              <span className="red_color text-2xl font-bold">Dp</span>
-              <span className="black_color text-2xl font-bold">
-                bossess.com
-              </span>
+              <span className="red_color">Dp</span>
+              <span className="black_color">BOSSESS.COM</span>
             </h2>
           </Link>
         </div>
@@ -221,16 +219,16 @@ const ResultJoid = () => {
             {userData.gamenumber}
           </h2>
 
-          <Button className="button" onClick={handleRefresh}>
+          <button className="button" onClick={handleRefresh}>
             Refresh
-          </Button>
+          </button>
         </div>
-
-        <div className="jodi_result max-w-3xl m-auto text-center">
+        <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToBottom}>
             Go To Bottom
           </button>
-
+        </div>
+        <div className="jodi_result max-w-3xl m-auto text-center">
           <h3 className="panel_heading text-xl font-bold uppercase text-center">
             {gameName} MATKA PANEL RECORD 2019 - 2025
           </h3>
@@ -240,7 +238,10 @@ const ResultJoid = () => {
                 <tr className="thead">
                   {/* <th className="border border-gray-400 px-4 py-2">Date</th> */}
                   {daysOfWeek.map((day) => (
-                    <th key={day} className="border border-gray-400 px-4 py-2">
+                    <th
+                      key={day}
+                      className="border border-gray-400 none_itelic"
+                    >
                       {day}
                     </th>
                   ))}
@@ -256,11 +257,11 @@ const ResultJoid = () => {
                       {daysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
-                          className="border border-gray-400 px-4 py-2 text-center"
+                          className="border border-gray-400 text-center max-w-16"
                         >
                           {data.days[day]?.length > 0 ? (
-                            <div className="grid gap-2 text-center w-full">
-                              <div className="mid-digits font-bold flex items-center justify-center min-h-[60px]">
+                            
+                              <div className="mid-digits font-bold flex items-center justify-center py-2">
                                 {data.days[day].map((entry, index) => (
                                   <div key={`mid-${weekKey}-${day}-${index}`}>
                                     <span className="text-2xl font-bold none_itelic">
@@ -272,7 +273,7 @@ const ResultJoid = () => {
                                   </div>
                                 ))}
                               </div>
-                            </div>
+                            
                           ) : (
                             '*'
                           )}
@@ -284,10 +285,12 @@ const ResultJoid = () => {
               </tbody>
             </table>
           ) : (
-            <p className='flex justify-center items-center'>
+            <p className="flex justify-center items-center">
               <img src={LoadingImage} alt="Loading..." />
             </p>
           )}
+        </div>
+        <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToTop}>
             Go To Top
           </button>

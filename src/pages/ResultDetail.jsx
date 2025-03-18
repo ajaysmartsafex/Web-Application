@@ -181,13 +181,11 @@ const ResultDetail = () => {
   return (
     <div className="panel_result">
       <Container>
-        <div className="border_red_line">
+        <div className="header_section border_red_line">
           <Link to="/">
             <h2 className="w-full flex items-center justify-center">
-              <span className="red_color text-2xl font-bold">Dp</span>
-              <span className="black_color text-2xl font-bold">
-                bossess.com
-              </span>
+              <span className="red_color">Dp</span>
+              <span className="black_color">BOSSESS.COM</span>
             </h2>
           </Link>
         </div>
@@ -218,15 +216,18 @@ const ResultDetail = () => {
           <h2 className="game_number text-xl font-bold">
             {userData.gamenumber}
           </h2>
-
-          <button className="button" onClick={handleRefresh}>
-            Refresh
-          </button>
+          <div>
+            <button className="button" onClick={handleRefresh}>
+              Refresh
+            </button>
+          </div>
         </div>
-        <div className="panel_result max-w-5xl m-auto text-center">
+        <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToBottom}>
             Go To Bottom
           </button>
+        </div>
+        <div className="panel_result_container max-w-5xl m-auto text-center">
           <h3 className="panel_heading text-xl font-bold uppercase text-center">
             {gameName} MATKA PANEL RECORD 2019 - 2025
           </h3>
@@ -234,13 +235,11 @@ const ResultDetail = () => {
             <table className="w-full border-collapse border border-gray-400">
               <thead>
                 <tr className="thead">
-                  <th className="border border-gray-400 px-4 py-2 none_itelic">
-                    Date
-                  </th>
+                  <th className="border border-gray-400 none_itelic">Date</th>
                   {daysOfWeek.map((day) => (
                     <th
                       key={day}
-                      className="border border-gray-400 px-2 py-2 none_itelic"
+                      className="border border-gray-400 none_itelic"
                     >
                       {day}
                     </th>
@@ -251,14 +250,14 @@ const ResultDetail = () => {
                 {sortedWeeks.map(([weekKey, data]) => (
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
-                      <td className="border border-gray-400 p-2 font-bold text-center text-sm none_itelic">
+                      <td className="border border-gray-400 p-1 text-center none_itelic text-sm font-bold">
                         {data.startDate.split('-').reverse().join('/')} <br />{' '}
                         to <br /> {data.endDate.split('-').reverse().join('/')}
                       </td>
                       {daysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
-                          className="border border-gray-400 px-1 py-1 text-center none_itelic"
+                          className="border border-gray-400 p-1 text-center none_itelic"
                         >
                           {data.days[day]?.length > 0 ? (
                             <div className="grid grid-cols-3 gap-2 text-center w-full">
@@ -320,6 +319,8 @@ const ResultDetail = () => {
               <img src={LoadingImage} alt="Loading..." />
             </p>
           )}
+        </div>
+        <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToTop}>
             Go To Top
           </button>

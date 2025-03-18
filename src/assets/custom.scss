@@ -1,5 +1,6 @@
 body {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .go_to_bottom {
@@ -124,22 +125,27 @@ body {
 }
 
 main {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-style: italic;
   max-width: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   .header_section {
+    padding: 0 0 16px !important;
     :nth-child(1) {
       font-size: 50px;
       font-weight: 700;
       text-shadow: 1px 1px 1px #000;
+      line-height: normal;
     }
     :nth-child(2) {
       font-size: 30px;
       font-weight: 700;
       text-shadow: 1px 1px 1px #000;
+      line-height: normal;
+      margin-top: 10px;
     }
   }
 
@@ -166,9 +172,11 @@ main {
     text-align: center;
     display: inline-block;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
     margin: 4px 2px;
     cursor: pointer;
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
   }
   .green-btn {
     background: linear-gradient(#00d309, #004503);
@@ -257,7 +265,6 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-
   .table_container {
     .charts_heading {
       max-width: 100%;
@@ -283,11 +290,10 @@ main {
         background: navy;
         border: 0;
         color: #fff;
+        border: 1px solid #03a9f4a8;
       }
-
-      td {
-        border: 1px solid navy;
-        text-align: center;
+      tbody td {
+        border: 1px solid #03a9f4a8;
       }
     }
   }
@@ -296,6 +302,16 @@ main {
     img {
       border-radius: 10px;
     }
+  }
+  .panel_result_container {
+    border: 1px solid #3f51b5;
+    width: 85%;
+    margin: 0 auto 0;
+  }
+  .jodi_result {
+    border: 1px solid #3f51b5;
+    width: 60%;
+    margin: 0 auto 0;
   }
 }
 
