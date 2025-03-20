@@ -32,13 +32,6 @@ const ResultJoid = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await appwriteResultService.getResults();
-        if (response?.documents) {
-          dispatch(setGameResults(response.documents));
-        } else {
-          console.warn('No documents found in response');
-        }
-
         const gamesResponse = await appwriteGameService.getGames();
         if (gamesResponse?.documents) {
           const sortedGames = gamesResponse.documents.sort((a, b) => {
@@ -59,6 +52,13 @@ const ResultJoid = () => {
           };
           const userDatas = getGameData(gameName);
           setUserData(userDatas);
+
+          const response = await appwriteResultService.getResults();
+          if (response?.documents) {
+            dispatch(setGameResults(response.documents));
+          } else {
+            console.warn('No documents found in response');
+          }
           dispatch(setGameDate(sortedGames));
         } else {
           console.warn('No game documents found in response');

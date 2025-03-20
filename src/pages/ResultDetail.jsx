@@ -42,12 +42,6 @@ const ResultDetail = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await appwriteResultService.getResults();
-        if (response?.documents) {
-          dispatch(setGameResults(response.documents));
-        } else {
-          console.warn('No documents found in response');
-        }
 
         const gamesResponse = await appwriteGameService.getGames();
         if (gamesResponse?.documents) {
@@ -65,10 +59,19 @@ const ResultDetail = () => {
                 gamenumber: game.gamenumber,
               };
             }
-            return { title: 'Unknown Game', gamenumber: 'N/A' };
+            return { title: 'Unknown Game', gamenumber: 'N/A' }; // Fallback
           };
+
           const userDatas = getGameData(gameName);
           setUserData(userDatas);
+          
+          const response = await appwriteResultService.getResults();
+          if (response?.documents) {
+            dispatch(setGameResults(response.documents));
+          } else {
+            console.warn('No documents found in response');
+          }
+
           dispatch(setGameDate(sortedGames));
         } else {
           console.warn('No game documents found in response');
