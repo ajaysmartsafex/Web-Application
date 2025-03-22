@@ -680,11 +680,18 @@ span.start_time.end_time.font-bold {
   border-radius: 0.75em;
 }
 
+.dpbossess_logo{
+  max-height: 70px;
+}
+
 @media only screen and (max-width: 767px) {
   .body_color {
     padding: 3px 3px !important;
   }
   main {
+    .dpbossess_logo{
+  max-height: 50px;
+}
     .panel_result,
     .jodi_result {
       width: 100% !important;

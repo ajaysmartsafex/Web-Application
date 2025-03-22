@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import DpbossessLogo from '../assets/dp-logo.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -185,8 +186,11 @@ const ResultJoid = () => {
         <div className="header_section border_red_line">
           <Link to="/" className="w-full flex text-center">
             <h2 className="w-full flex items-center justify-center">
-              <span className="red_color">Dp</span>
-              <span className="black_color">BOSSESS.COM</span>
+              <img
+                src={DpbossessLogo}
+                alt="Dpbossess Logo"
+                className="dpbossess_logo"
+              />
             </h2>
           </Link>
         </div>
