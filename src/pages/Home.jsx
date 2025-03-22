@@ -25,7 +25,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="w-full">
+    <div className="w-full px-3">
       <Container>
         <Header />
         <Welcome />

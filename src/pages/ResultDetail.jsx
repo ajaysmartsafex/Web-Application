@@ -43,7 +43,6 @@ const ResultDetail = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-
         const gamesResponse = await appwriteGameService.getGames();
         if (gamesResponse?.documents) {
           const sortedGames = gamesResponse.documents.sort((a, b) => {
@@ -65,7 +64,7 @@ const ResultDetail = () => {
 
           const userDatas = getGameData(gameName);
           setUserData(userDatas);
-          
+
           const response = await appwriteResultService.getResults();
           if (response?.documents) {
             dispatch(setGameResults(response.documents));
@@ -188,7 +187,11 @@ const ResultDetail = () => {
         <div className="header_section border_red_line text-center">
           <Link to="/">
             <h2 className="w-full flex items-center justify-center">
-              <img src={DpbossessLogo} alt="Dpbossess Logo" className='dpbossess_logo'/>
+              <img
+                src={DpbossessLogo}
+                alt="Dpbossess Logo"
+                className="dpbossess_logo"
+              />
             </h2>
           </Link>
         </div>
@@ -200,18 +203,21 @@ const ResultDetail = () => {
             {userData.title} PANEL RESULT CHART RECORDS
           </p>
           <p className="w-full dark_blue_color text_shadow_white font-bold not-italic f_12 text-center pb-1">
-            dpbossess.com MILAN MORNING jodi chart, MILAN MORNING jodi chart,
-            old MILAN MORNING jodi chart, dpbossess.com MILAN MORNING chart,
-            MILAN MORNING jodi record, MILAN MORNINGjodi record, MILAN MORNING
-            jodi chart 2015, MILAN MORNING jodi chart 2012, MILAN MORNING jodi
-            chart 2012 to 2023, MILAN MORNING final ank, MILAN MORNING jodi
-            chart.co, MILAN MORNING jodi chart matka, MILAN MORNING jodi chart
-            book, MILAN MORNING matka chart, matka jodi chart MILAN MORNING,
-            matka MILAN MORNING chart, satta MILAN MORNING chart jodi, MILAN
-            MORNING state chart, MILAN MORNING chart result, डीपी बॉस, सट्टा
-            चार्ट, सट्टा मटका जोड़ी चार्ट, सट्टा मटका जोड़ी चार्ट, मिलान डे मटका
-            जोड़ी चार्ट, सट्टा मटका मिलान डे चार्ट जोड़ी, मिलान डे सट्टा चार्ट,
-            मिलान डे जोड़ी चार्ट
+            dpbossess {userData.title} panel chart, {userData.title} panel
+            chart, old {userData.title} panel chart, {userData.title} pana patti
+            chart, dpboss {userData.title}, {userData.title} panel record,
+            {userData.title} panel record, {userData.title} panel chart 2015,
+            {userData.title}
+            panel chart 2012, {userData.title} panel chart 2012 to 2023,
+            {userData.title} final ank, {userData.title} panel chart.co,
+            {userData.title} panel chart matka, {userData.title} panel chart
+            book, {userData.title} matka chart, matka panel chart
+            {userData.title}, matka {userData.title} chart, satta
+            {userData.title} chart panel, {userData.title} state chart,
+            {userData.title} chart result, डीपी बॉस, सट्टा चार्ट, सट्टा मटका
+            पैनल चार्ट, सट्टा मटका पैनल चार्ट, मिलान मॉर्निंग मटका पैनल चार्ट,
+            सट्टा मटका मिलान मॉर्निंग चार्ट पैनल, मिलान मॉर्निंग सट्टा चार्ट,
+            मिलान मॉर्निंग पैनल चार्ट
           </p>
         </div>
         <div className="border_black_line text-center border_radius_head_0 py-1 not-italic">
@@ -260,7 +266,7 @@ const ResultDetail = () => {
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 p-1 text-center none_itelic text-sm font-bold">
-                        {data.startDate.split('-').reverse().join('/')} <br />{' '}
+                        {data.startDate.split('-').reverse().join('/')} <br />
                         to <br /> {data.endDate.split('-').reverse().join('/')}
                       </td>
                       {daysOfWeek.map((day) => (
@@ -345,32 +351,79 @@ const ResultDetail = () => {
           </button>
         </div>
 
+        <div className="footer-text-div">
+          <p>
+            Welcome to DPBossess Services, your premier destination for accurate
+            and comprehensive {userData.title} Panel Chart Records in the realm
+            of Satta Matka. At DPBossess, we are dedicated to providing
+            enthusiasts with a reliable platform for accessing real-time data,
+            historical records, and insightful analysis related to the
+            {userData.title} panel charts. Whether you are a seasoned player or
+            a newcomer, our commitment is to enhance your Satta Matka
+            experience.
+          </p>
+          <br />
+          <div className="small-heading">
+            {userData.title} Panel Chart Records Online
+          </div>
+          <p>
+            {userData.title} Panel Chart Records on DPBossess Services are
+            meticulously curated, ensuring accuracy and relevance. Our charts
+            are regularly updated to provide users with the latest information,
+            allowing you to make informed decisions for your Satta Matka
+            gameplay. Dive into the historical trends, identify patterns, and
+            strategize with confidence using our user-friendly interface. Choose
+            DPBossess Services as your go-to platform for {userData.title} Panel
+            Chart Records, and elevate your Satta Matka experience with accurate
+            data and strategic insights.
+          </p>
+          <br />
+          <div className="faq-heading">
+            Frequently Asked Questions (FAQ) for {userData.title} Panel Chart
+            Records:
+          </div>
+          <p className="faq-title">
+            Q1: How frequently are the {userData.title} Panel Chart Records
+            updated on DPBossess Services?
+          </p>
+          <p className="faq-ans">
+            DPBossess Services, we understand the importance of timely and
+            accurate information. The {userData.title} Panel Chart Records are
+            updated regularly to ensure users have access to the latest data for
+            analysis and gameplay strategies. Count on us for real-time updates
+            to enhance your Satta Matka journey.
+          </p>
+          <p className="faq-title">
+            Q2: Is there a cost associated with accessing {userData.title} Panel
+            Chart Records on DPBossess Services?
+          </p>
+          <p className="faq-ans">
+            No, accessing {userData.title} Panel Chart Records on DPBossess
+            Services is completely free of charge. We believe in making valuable
+            information accessible to all Satta Matka enthusiasts. Simply visit
+            our platform and explore the comprehensive {userData.title} panel
+            charts to empower your gameplay without any financial commitment.
+          </p>
+        </div>
+        <br />
         <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToTop}>
             Go To Top
           </button>
         </div>
-
-        <div className="bg-white text-center py-4 text-2xl font-bold blue_color text_shadow_yellow border-4 border-black">
-          <Link href="#" title="Suryamatkaonline">
-            SITEMAP
+        <br />
+        <footer className="footer_result">
+          <Link to="/" className="ftr-icon" title="Dpbossess">
+            Dpbossess.com
           </Link>
-          <Link href="fix" title="date fix">
-            DATE FIX
-          </Link>
-          <Link href="#" title="terms and condition">
-            TERMS &amp; CONDITION
-          </Link>
-          <Link href="#" title="privacy policy">
-            PRIVACY POLICY
-          </Link>
-          <Link href="#" title="about us">
-            ABOUT US
-          </Link>
-          <Link href="#" title="contact us">
-            CONTACT
-          </Link>
-        </div>
+          <p>
+            All Rights Reseved®
+            <br />
+            (1998-2024)
+            <br />
+            Contact (Astrologer-<span>Dpbossess</span>)
+          </p>
+        </footer>
       </Container>
     </div>
   );

@@ -202,18 +202,21 @@ const ResultJoid = () => {
             {userData.title} JODI RESULT CHART RECORDS
           </p>
           <p className="w-full dark_blue_color text_shadow_white font-bold not-italic f_12 text-center pb-1">
-            dpbossess.com MILAN MORNING jodi chart, MILAN MORNING jodi chart,
-            old MILAN MORNING jodi chart, dpbossess.com MILAN MORNING chart,
-            MILAN MORNING jodi record, MILAN MORNINGjodi record, MILAN MORNING
-            jodi chart 2015, MILAN MORNING jodi chart 2012, MILAN MORNING jodi
-            chart 2012 to 2023, MILAN MORNING final ank, MILAN MORNING jodi
-            chart.co, MILAN MORNING jodi chart matka, MILAN MORNING jodi chart
-            book, MILAN MORNING matka chart, matka jodi chart MILAN MORNING,
-            matka MILAN MORNING chart, satta MILAN MORNING chart jodi, MILAN
-            MORNING state chart, MILAN MORNING chart result, डीपी बॉस, सट्टा
-            चार्ट, सट्टा मटका जोड़ी चार्ट, सट्टा मटका जोड़ी चार्ट, मिलान डे मटका
-            जोड़ी चार्ट, सट्टा मटका मिलान डे चार्ट जोड़ी, मिलान डे सट्टा चार्ट,
-            मिलान डे जोड़ी चार्ट
+            Dpbossess {userData.title} jodi chart, {userData.title}
+            jodi chart, old {userData.title} jodi chart, Dpbossess
+            {userData.title} chart, {userData.title}
+            jodi record, {userData.title}jodi record, {userData.title} jodi
+            chart 2015, {userData.title}
+            jodi chart 2012, {userData.title} jodi chart 2012 to 2023,
+            {userData.title} final ank,
+            {userData.title} jodi chart.co, {userData.title} jodi chart matka,
+            {userData.title} jodi chart book, {userData.title} matka chart,
+            matka jodi chart {userData.title}, matka {userData.title}
+            chart, satta {userData.title} chart jodi, {userData.title} state
+            chart, {userData.title} chart result, डीपी बॉस, सट्टा चार्ट, सट्टा
+            मटका जोड़ी चार्ट, सट्टा मटका जोड़ी चार्ट, {userData.title} मटका जोड़ी
+            चार्ट, सट्टा मटका {userData.title} चार्ट जोड़ी, {userData.title}
+            सट्टा चार्ट, {userData.title} जोड़ी चार्ट
           </p>
         </div>
         <div className="border_black_line text-center border_radius_head_0 py-1 not-italic">
@@ -313,32 +316,72 @@ const ResultJoid = () => {
           </button>
         </div>
 
+        <div className="footer-text-div">
+          <p>
+            It is quite natural that the best betting website can differ based
+            on individual preferences and geographic location. Additionally, the
+            online betting landscape is dynamic, with new websites emerging and
+            existing ones changing. What may be considered the best for one
+            person might not be the same for another. However, when it comes to
+            DPBossess Services, almost all gamblers on the earth will usually
+            prefer this betting platform not only to play {userData.title} but also other
+            Satta Matka games
+          </p>
+          <br />
+          <div className="small-heading">
+            Get {userData.title} Jodi Chart Records
+          </div>
+          <p>
+            When you consider DPBossess Services to play the {userData.title} game, you do
+            not need to search for other analogous sites online. Most reputable
+            sources on the earth suggest gamblers choose this Satta Matka
+            website to play not only the {userData.title} game but also all other types
+            of Satta Matka games. Whatever variations you need to play your
+            favorite Satta Matka game, you will be capable of finding it easily
+            and quickly on DPBossess Services. Moreover, the only Satta Matka
+            website that has tons of positive feedback and customer reviews is
+            DPBossess Services. Thus, you can rest assured that the website can
+            meet your specific needs, criteria for security, game diversity,
+            bonuses, and customer backing
+          </p>
+          <br />
+          <div className="faq-heading">Frequently Asked Questions (FAQs):</div>
+          <p className="faq-title">
+            Q1: Can I Play my {userData.title} game on DPBossess Services from any part of
+            the world?
+          </p>
+          <p className="faq-ans">
+            Yes, you can because DPBossess Services provides its website users with
+            the convenience to play not only their {userData.title} game but also other
+            Satta Matka games from anywhere on earth.
+          </p>
+          <p className="faq-title">
+            Q2: Why most gamplaers prefer DPBossess Services?
+          </p>
+          <p className="faq-ans">
+            It is because the website it meets the entire playing needs of both
+            novice players as well as veteran gamblers.
+          </p>
+        </div>
+        <br />
         <div className="flex justify-center items-center">
           <button className="go_to_bottom" onClick={goToTop}>
             Go To Top
           </button>
         </div>
-
-        <div className="bg-white text-center py-4 text-2xl font-bold blue_color text_shadow_yellow border-4 border-black">
-          <Link href="#" title="Suryamatkaonline">
-            SITEMAP
+        <br />
+        <footer className="footer_result">
+          <Link to="/" className="ftr-icon" title="Dpbossess">
+            Dpbossess.com
           </Link>
-          <Link href="fix" title="date fix">
-            DATE FIX
-          </Link>
-          <Link href="#" title="terms and condition">
-            TERMS &amp; CONDITION
-          </Link>
-          <Link href="#" title="privacy policy">
-            PRIVACY POLICY
-          </Link>
-          <Link href="#" title="about us">
-            ABOUT US
-          </Link>
-          <Link href="#" title="contact us">
-            CONTACT
-          </Link>
-        </div>
+          <p>
+            All Rights Reseved®
+            <br />
+            (1998-2024)
+            <br />
+            Contact (Astrologer-<span>Dpbossess</span>)
+          </p>
+        </footer>
       </Container>
     </div>
   );
