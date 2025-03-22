@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button } from '../components/index';
 import { useParams } from 'react-router-dom';
 import { setGameResults } from '../store/resultsSlice';
 import appwriteResultService from '../appwrite/resultServices';
@@ -184,34 +183,36 @@ const ResultJoid = () => {
     <div className="jodi_chart">
       <Container>
         <div className="header_section border_red_line">
-          <Link to="/">
+          <Link to="/" className="w-full flex text-center">
             <h2 className="w-full flex items-center justify-center">
               <span className="red_color">Dp</span>
               <span className="black_color">BOSSESS.COM</span>
             </h2>
           </Link>
         </div>
-        <div className="section_header text-white uppercase text-sm border_radius_head_0">
+        <div className="section_header text-white uppercase f_18 border_radius_head_0 not-italic">
           {userData.title} JODI CHART
         </div>
-        <div className="border_red_line border_radius_head_0">
-          <p className="dark_blue_color text_shadow_white text-sm font-bold text-center p-2">
-            MILAN MORNING JODI RESULT CHART RECORDS <br />
-            suryamatkaonline.com MILAN MORNING jodi chart, MILAN MORNING jodi
-            chart, old MILAN MORNING jodi chart, suryamatkaonline.com MILAN
-            MORNING chart, MILAN MORNING jodi record, MILAN MORNINGjodi record,
-            MILAN MORNING jodi chart 2015, MILAN MORNING jodi chart 2012, MILAN
-            MORNING jodi chart 2012 to 2023, MILAN MORNING final ank, MILAN
-            MORNING jodi chart.co, MILAN MORNING jodi chart matka, MILAN MORNING
-            jodi chart book, MILAN MORNING matka chart, matka jodi chart MILAN
-            MORNING, matka MILAN MORNING chart, satta MILAN MORNING chart jodi,
-            MILAN MORNING state chart, MILAN MORNING chart result, डीपी बॉस,
-            सट्टा चार्ट, सट्टा मटका जोड़ी चार्ट, सट्टा मटका जोड़ी चार्ट, मिलान डे
-            मटका जोड़ी चार्ट, सट्टा मटका मिलान डे चार्ट जोड़ी, मिलान डे सट्टा
-            चार्ट, मिलान डे जोड़ी चार्ट
+        <div className="border_red_line border_radius_head_0 background_linear">
+          <p className="w-full dark_blue_color text_shadow_white font-bold f_14 not-italic py-1">
+            {userData.title} JODI RESULT CHART RECORDS
+          </p>
+          <p className="w-full dark_blue_color text_shadow_white font-bold not-italic f_12 text-center pb-1">
+            dpbossess.com MILAN MORNING jodi chart, MILAN MORNING jodi chart,
+            old MILAN MORNING jodi chart, dpbossess.com MILAN MORNING chart,
+            MILAN MORNING jodi record, MILAN MORNINGjodi record, MILAN MORNING
+            jodi chart 2015, MILAN MORNING jodi chart 2012, MILAN MORNING jodi
+            chart 2012 to 2023, MILAN MORNING final ank, MILAN MORNING jodi
+            chart.co, MILAN MORNING jodi chart matka, MILAN MORNING jodi chart
+            book, MILAN MORNING matka chart, matka jodi chart MILAN MORNING,
+            matka MILAN MORNING chart, satta MILAN MORNING chart jodi, MILAN
+            MORNING state chart, MILAN MORNING chart result, डीपी बॉस, सट्टा
+            चार्ट, सट्टा मटका जोड़ी चार्ट, सट्टा मटका जोड़ी चार्ट, मिलान डे मटका
+            जोड़ी चार्ट, सट्टा मटका मिलान डे चार्ट जोड़ी, मिलान डे सट्टा चार्ट,
+            मिलान डे जोड़ी चार्ट
           </p>
         </div>
-        <div className="border_red_line text-center border_radius_head_0">
+        <div className="border_black_line text-center border_radius_head_0 py-1 not-italic">
           <h1 className="game_name text-xl font-bold uppercase">
             {userData.title}
           </h1>
@@ -219,8 +220,11 @@ const ResultJoid = () => {
             {userData.gamenumber}
           </h2>
 
-          <button className="button" onClick={handleRefresh}>
-            Refresh
+          <button
+            className="button border_radius_head_0 not-italic"
+            onClick={handleRefresh}
+          >
+            Refresh Result
           </button>
         </div>
         <div className="flex justify-center items-center">
@@ -229,8 +233,8 @@ const ResultJoid = () => {
           </button>
         </div>
         <div className="jodi_result max-w-3xl m-auto text-center">
-          <h3 className="panel_heading text-xl font-bold uppercase text-center">
-            {gameName} MATKA PANEL RECORD 2019 - 2025
+          <h3 className="panel_heading uppercase text-center not-italic">
+            {userData.title} MATKA CHART RECORD 2019 - 2025
           </h3>
           {sortedWeeks.length > 0 ? (
             <table className="w-full border-collapse border border-gray-400">
@@ -240,7 +244,7 @@ const ResultJoid = () => {
                   {daysOfWeek.map((day) => (
                     <th
                       key={day}
-                      className="border border-gray-400 none_itelic py-1"
+                      className="border border-gray-800 none_itelic py-1"
                     >
                       {day}
                     </th>
@@ -257,23 +261,21 @@ const ResultJoid = () => {
                       {daysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
-                          className="border border-gray-400 text-center max-w-16"
+                          className="border border-gray-800 text-center max-w-16"
                         >
                           {data.days[day]?.length > 0 ? (
-                            
-                              <div className="mid-digits font-bold flex items-center justify-center py-2">
-                                {data.days[day].map((entry, index) => (
-                                  <div key={`mid-${weekKey}-${day}-${index}`}>
-                                    <span className="text-2xl font-bold none_itelic">
-                                      {entry.fourD}
-                                    </span>
-                                    <span className="text-2xl font-bold none_itelic">
-                                      {entry.fiveD}
-                                    </span>
-                                  </div>
-                                ))}
-                              </div>
-                            
+                            <div className="mid-digits font-bold flex items-center justify-center py-1">
+                              {data.days[day].map((entry, index) => (
+                                <div key={`mid-${weekKey}-${day}-${index}`}>
+                                  <span className="f_24 font-bold none_itelic">
+                                    {entry.fourD}
+                                  </span>
+                                  <span className="f_24 font-bold none_itelic">
+                                    {entry.fiveD}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
                           ) : (
                             '*'
                           )}
@@ -290,12 +292,8 @@ const ResultJoid = () => {
             </p>
           )}
         </div>
-        <div className="flex justify-center items-center">
-          <button className="go_to_bottom" onClick={goToTop}>
-            Go To Top
-          </button>
-        </div>
-        <div className="border_red_line text-center border_radius_head_0">
+
+        <div className="border_black_line text-center border_radius_head_0 py-1 not-italic">
           <h1 className="game_name text-xl font-bold uppercase">
             {userData.title}
           </h1>
@@ -303,10 +301,20 @@ const ResultJoid = () => {
             {userData.gamenumber}
           </h2>
 
-          <Button className="button" onClick={handleRefresh}>
-            Refresh
-          </Button>
+          <button
+            className="button border_radius_head_0 not-italic"
+            onClick={handleRefresh}
+          >
+            Refresh Result
+          </button>
         </div>
+
+        <div className="flex justify-center items-center">
+          <button className="go_to_bottom" onClick={goToTop}>
+            Go To Top
+          </button>
+        </div>
+
         <div className="bg-white text-center py-4 text-2xl font-bold blue_color text_shadow_yellow border-4 border-black">
           <Link href="#" title="Suryamatkaonline">
             SITEMAP

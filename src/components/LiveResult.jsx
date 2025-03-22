@@ -90,27 +90,25 @@ const LiveResult = () => {
   // }
 
   return (
-    <div className="border_red_line text-center">
+    <div className="live_result_section border_red_line text-center">
       <Container>
-        <div className="section_header yellow_color">☔ Live Result ☔</div>
-        <h1 className="text-xl font-medium mb-2 uppercase text_shadow">
-          Sab se tez result yahi milega
-          <br /> <span className="red_color">dp</span>
-          <span className="black_color">bossess.com</span>
+        <div className="section_header uppercase f_20">☔Live Result☔</div>
+        <h1 className="f_20">
+          Sabse Tezz Live Result Yahi Milega
         </h1>
         {filteredGames.length > 0 ? (
           filteredGames.map((game) => {
             return (
               <div
                 key={game.$id}
-                className="border-t border-red-600 grid grid-cols-1 p-2 mb-2 text-center"
+                className="border-b border-red-600 grid grid-cols-1 mb-2 pb-2 text-center"
               >
-                <h1 className="game_name text-xl font-bold">{game.title}</h1>
-                <h2 className="game_number text-xl font-bold">
+                <h1 className="game_name">{game.title}</h1>
+                <h2 className="game_number">
                   {game.gamenumber || 'N/A'}
                 </h2>
                 <Link to="#">
-                  <Button className="button mr-3" onClick={handleRefresh}>
+                  <Button className="button" onClick={handleRefresh}>
                     Refresh
                   </Button>
                 </Link>

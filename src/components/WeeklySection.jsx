@@ -4,14 +4,14 @@ import Container from './container/Container';
 const WeeklySection = () => {
   return (
     <Container>
-      <div className="table_container px-3 my-3">
+      <div className="table_container_section border-2 border-red-500 my-3">
         <h3 className="charts_heading text-center py-2 font-semibold">
-          dpbossess.com dpbossess.com Weekly Patti Or Penal Chart From
-          19-06-2023 To 24-06-2023 For Kalyan, Milan, Kalyan Night, Rajdhani,
-          Time, Main Bazar, Time, Sridevi (All Market)
+          dpbossess.com Weekly Patti Or Penal Chart From 19-06-2023 To
+          24-06-2023 For Kalyan, Milan, Kalyan Night, Rajdhani, Time, Main
+          Bazar, Time, Sridevi (All Market)
         </h3>
 
-        <div className="text-center border_right border_left">
+        <div className="text-center">
           <div className="date">1=&gt;357-348-690-267</div>
           <div className="date">2=&gt;457-123-330-466</div>
           <div className="date">3=&gt;235-569-389-280</div>
@@ -25,14 +25,14 @@ const WeeklySection = () => {
         </div>
       </div>
 
-      <div className="table_container px-3 my-3">
+      <div className="table_container_section border-2 border-red-500 my-3">
         <h3 className="charts_heading text-center py-2 font-semibold">
           dpbossess.com Weekly Line Open Or Close From 19-05-2023 To 24-06-2023
           For Kalyan, Milan, Kalyan Night, Rajdhani, Time, Main Bazar, Time,
           Sridevi (All Market)
         </h3>
 
-        <div className="text-center border_right border_left">
+        <div className="text-center">
           <div className="date">Mon. 2-3-4-5</div>
           <div className="date">Tue. 2-7-4-9</div>
           <div className="date">Wed. 4-9-3-8</div>
@@ -43,14 +43,14 @@ const WeeklySection = () => {
         </div>
       </div>
 
-      <div className="table_container px-3 my-3">
+      <div className="table_container_section border-2 border-red-500 my-3">
         <h3 className="charts_heading text-center py-2 font-semibold">
           dpbossess.com Weekly Jodi Chart From 19-06-2023 To 24-06-2023 For
           Kalyan, Milan, Kalyan Night, Rajdhani, Time, Main Bazar, Time, Sridevi
           (All Market)
         </h3>
 
-        <div className="text-center border_right border_left">
+        <div className="text-center">
           <div className="date">95-90-95-97</div>
           <div className="date">33-37-39-30</div>
           <div className="date">50-59-61-68</div>

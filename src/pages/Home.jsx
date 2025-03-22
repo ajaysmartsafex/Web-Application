@@ -6,8 +6,9 @@ import {
   Welcome,
   SattaMatka,
   SectionFour,
-  Notice,
   LiveResult,
+  SectionFive,
+  Notice,
   MainStarLine,
   SurayStarLine,
   FastLiveResult,
@@ -19,7 +20,7 @@ import {
   MatkaJodiChart,
   MatkaPanelChart,
   Introduction,
-  Footer
+  Footer,
 } from '../components';
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
         <SattaMatka />
         <SectionFour />
         <LiveResult />
+        <SectionFive />
         <Notice />
         <WorldResult />
         <MainStarLine />

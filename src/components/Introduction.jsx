@@ -9,7 +9,7 @@ const Introduction = () => {
           <div className="section_header text-white">
             Introduction to DPBOSSESS.COM
           </div>
-          <div className="text-center text-xs px-5 border_bottom">
+          <div className="text-center text-xs border_bottom">
             <p>
               Welcome to DPBOSSESS, where entertainment takes center stage, and
               a world of diverse activities awaits you. In our vibrant
@@ -61,7 +61,7 @@ const Introduction = () => {
               in the game.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>TYPES OF SATTA MATKA</h2>
             <p>
               Kalyan Matka: Kalyan Matka is one of the most popular variants of
@@ -91,7 +91,7 @@ const Introduction = () => {
               games.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>THE BASICS OF MATKA</h2>
             <p>
               Matka game officially originated in India 1960s. It is a very
@@ -129,7 +129,7 @@ const Introduction = () => {
               their betting amount.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>DIFFERENT VARIANTS OF MATKA GAMES</h2>
             <p>
               There are several variants of Matka Games that have emerged over
@@ -155,7 +155,7 @@ const Introduction = () => {
               matches the result, they win.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3">
+          <div className="text-center text-xs py-3">
             <h2>WHAT IS KALYAN MATKA AND ITS WINNING STRATEGY</h2>
             <p>
               Kalyan Matka is a popular form of gambling that originated in
@@ -183,7 +183,7 @@ const Introduction = () => {
       </div>
       <div className="introduction_cont_second border_red_line">
         <Container>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS MUMBAI MATKA?</h2>
             <p>
               The variant of the Matka gambling game which originated in Mumbai,
@@ -193,7 +193,7 @@ const Introduction = () => {
               around the number and combinations.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS RAJDHANI MATKA?</h2>
             <p>
               Rajdhani Matka is a very popular matka game and variant of Matka
@@ -210,7 +210,7 @@ const Introduction = () => {
               participating in the Rajdhani Matka or any other Format of games.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS SATTA CHART ANALYSIS?</h2>
             <p>
               The Satta Chart Analysis is the study of historical Satta Matka to
@@ -223,7 +223,7 @@ const Introduction = () => {
               boundaries
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS MATKA OPEN AND MATKA CLOSE?</h2>
             <p>
               "Matka Open" is the first set of numbers that are announced or
@@ -240,7 +240,7 @@ const Introduction = () => {
               determined by the Matka Close
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>
               MATKA JODI ON dpbossss.services: COMBINING NUMBERS FOR WINNING
               BETS
@@ -270,7 +270,7 @@ const Introduction = () => {
               combinations may have various payout rates.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3">
+          <div className="text-center text-xs py-3">
             <h2>BOMBAY SATTA GUESSING AND TIPS</h2>
             <p>
               Bombay Satta which is also known as the Mumbai Satta or Mumbai
@@ -296,7 +296,7 @@ const Introduction = () => {
       </div>
       <div className="introduction_cont_third border_red_line">
         <Container>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS SATTA MATKA?</h2>
             <p>
               Satta Matka originated in India and is one of the popular forms of
@@ -304,7 +304,7 @@ const Introduction = () => {
               different numbers and earning potential winning on the outcome.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHO IS DPBOSS</h2>
             <p>
               DPBOSS is known for providing the best tips and guidance to
@@ -313,7 +313,7 @@ const Introduction = () => {
               Games.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>HOW DOES MATKA WORK?</h2>
             <p>
               In Matka, players need to choose a specific set of numbers from
@@ -322,7 +322,7 @@ const Introduction = () => {
               chooses, they win.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS KALYAN MATKA?</h2>
             <p>
               Kalyan Matka is totally a variant of Satta Matka which mainly
@@ -330,7 +330,7 @@ const Introduction = () => {
               the Bombay Cotton Exchange.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>HOW CAN I CHECK THE MATKA RESULT?</h2>
             <p>
               Matka results can be checked through various online platforms or
@@ -339,7 +339,7 @@ const Introduction = () => {
               for ease.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS MATKA CHART?</h2>
             <p>
               The Matka Chart refers to the graphical representation of any
@@ -348,7 +348,7 @@ const Introduction = () => {
               future games
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS THE DIFFERENCE BETWEEN MATKA AND SATTA?</h2>
             <p>
               Satta is a broad term that refers to any type of gambling games.
@@ -356,7 +356,7 @@ const Introduction = () => {
               betting on numbers that are drawn out from the Matka.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT ARE MATKA OPEN AND MATKA CLOSE?</h2>
             <p>
               First and last numbers are referred to as the Matka Open and Matka
@@ -365,7 +365,7 @@ const Introduction = () => {
               drawn out.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT ARE MATKA PANNA AND MATKA JODI?</h2>
             <p>
               In Matka Panna it is all about the three-digit number which
@@ -374,7 +374,7 @@ const Introduction = () => {
               combinations to increase any chances of winning.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS FIX SATTA?</h2>
             <p>
               Any predetermined or fixed set of numbers refers to the Fix Satta.
@@ -382,7 +382,7 @@ const Introduction = () => {
               information as the outcomes are already redecided.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>WHAT IS LUCKY ONLINE MATKA?</h2>
             <p>
               The Lucky Online Matka game refers to an online gaming platform
@@ -391,7 +391,7 @@ const Introduction = () => {
               win a huge amount.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>LIVE MATKA</h2>
             <p>
               It is another variant of Satta Matka which involves real time
@@ -401,7 +401,7 @@ const Introduction = () => {
               participate in it.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>GALI DESHAWAR MATKA</h2>
             <p>
               It is one of the variants of Satta Matka Game which is popular in
@@ -410,7 +410,7 @@ const Introduction = () => {
               predicting the outcome based on the draw system.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>BOMBAY SATTA</h2>
             <p>
               Bombay Satta refers to the Satta Matka game which is specifically
@@ -418,7 +418,7 @@ const Introduction = () => {
               included in it like Kalyan Matka, Mani Mumbai Matka and more.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>SATTAMATKA TIPS</h2>
             <p>
               SattaMatka tips are suggestions and strategies provided by the
@@ -428,7 +428,7 @@ const Introduction = () => {
               any mathematical calculations.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>SATTA MATKA WORLD</h2>
             <p>
               Satta Matka World refers to the vast community of players and
@@ -439,7 +439,7 @@ const Introduction = () => {
               will tailor content according to your preferences.
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>सट्टा मटका क्या है?</h2>
             <p>
               सट्टा मटका एक जुआ है जो भारत में उत्पन्न हुआ था, जिसमें न्यू यॉर्क
@@ -447,7 +447,7 @@ const Introduction = () => {
               सट्टा लगाई जाती थी।
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>सट्टा मटकाकैसे खेलें?</h2>
             <p>
               सट्टा मटका में खेलने के लिए आपको नंबर चुनना होता है और उन पर सट्टा
@@ -455,14 +455,14 @@ const Introduction = () => {
               जोड़ी, पन्ना, और संगम।
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>सट्टा मटकामें जीतने के चांस कैसे बढ़ाएं?</h2>
             <p>
               सट्टा मटका में जीतने के चांस को बढ़ाने के लिए नियमों को समझें,
               रुझानों का पालन करें, और जिम्मेदार जुआ खेलें।
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>कल्याण मटका क्या होता है?</h2>
             <p>
               कल्याण मटका एक प्रकार का सट्टा मटका बाजार है जो भारत में खेला जाता
@@ -470,7 +470,7 @@ const Introduction = () => {
               जोड़ियाँ आदि।
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3 border_bottom">
+          <div className="text-center text-xs py-3 border_bottom">
             <h2>मटका कैसे काम करता है?</h2>
             <p>
               मटका में, खिलाड़ियों को किसी पूर्वनिर्धारित सीमा से एक विशिष्ट सेट
@@ -479,7 +479,7 @@ const Introduction = () => {
               खिलाड़ी ने चुना है, तो वह जीतते हैं।
             </p>
           </div>
-          <div className="text-center text-xs px-5 py-3">
+          <div className="text-center text-xs py-3">
             <h2>मटका के विशेष शब्द क्या है?</h2>
             <p>
               सिंगल: सट्टे के लिए 0 से 9 तक का एक अकेला अंक। उदाहरण के लिए 1।

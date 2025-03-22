@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <Container>
-        <div className="section_header text-white ml-2 mr-2">
+        <div className="section_header text-white">
           POWERD BY dpbossess.com
         </div>
         <div className="border_red_line">

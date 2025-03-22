@@ -5,12 +5,10 @@ import Container from './container/Container';
 const FastLiveResult = () => {
   return (
     <Container>
-      <div className="table_container px-3 my-3">
-        <h3 className="charts_heading text-center py-2 font-semibold">
-          !! FASTEST LIVE RESULT !!
-        </h3>
+      <div className="table_container border-2 border-red-500 rounded-xl my-3">
+        <h3 className="section_header f_22">!! FASTEST LIVE RESULT !!</h3>
 
-        <div className="text-center border_right border_left">
+        <div className="text-center border_bottom">
           <div className="newst py-2">
             <div className="tg">Surya</div>
             <div className="tt">(11:00am)</div>
@@ -37,7 +35,7 @@ const FastLiveResult = () => {
               dpbossess.com
             </Link>
           </div>
-          <div className="newst py-2">
+          <div className="border_bottom_0 newst py-2">
             <div className="tg">Surya Night</div>
             <div className="tt">(08:00pm)</div>
             <div className="bolditc">

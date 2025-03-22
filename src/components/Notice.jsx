@@ -5,27 +5,27 @@ import Container from './container/Container';
 const Notice = () => {
   return (
     <>
-      <div className="border_red_line">
+      <div className="px-2 py-2 border_red_line">
         <Container>
-          <div className="section_header yellow_color">☆ NOTICE ☆</div>
+          <div className="section_header_second">☆ NOTICE ☆</div>
           <div className="text-center">
-            <h1 className="py-2 text-base font-bold">
+            <h1 className="text-base font-bold">
               अपना बाजार dpbossess.com वेबसाइट में डलवाने <br />
               के लिए आज ही हमें ईमेल करें
             </h1>
             <Link
               href="#"
-              className="py-2 text-base font-bold blue_color"
+              className="text-base font-bold blue_color"
               target="_blank"
               rel="noopener noreferrer"
             >
               Email : support@dpbossess.com
             </Link>
-            <h1 className="py-2 text-base font-bold">शर्ते लागु</h1>
+            <h1 className="text-base font-bold">शर्ते लागु</h1>
           </div>
         </Container>
       </div>
-      <div className="border_red_line">
+      <div className="border_red_line background_linear">
         <Container>
           <p className="dark_blue_color text_shadow_white text-sm font-bold text-center p-2">
             KALYAN MATKA | MATKA RESULT | KALYAN MATKA TIPS | SATTA MATKA |

@@ -4,10 +4,8 @@ import Container from './container/Container';
 const SurayStarLine = () => {
   return (
     <Container>
-      <div className="table_container px-3">
-        <h3 className="charts_heading text-center py-2 font-semibold">
-          SURYA STARLINE
-        </h3>
+      <div className="table_container">
+        <h3 className="section_header f_22">SURYA STARLINE</h3>
         <table className="text-center " width="100%" border="1">
           <thead>
             <tr>

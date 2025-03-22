@@ -5,11 +5,8 @@ import Kuberaya from '../assets/kuberaya.jpg';
 const KalyanSection = () => {
   return (
     <div className="kalyan_cont border_red_line text-center">
-      <Container>
-        <div className="section_header">
-          <span className="text-white pr-2">⇛</span>
-          <span className="black_color">कल्याण पासिंग प्रूफ</span>
-        </div>
+      <Container>        
+        <h3 className="section_header f_22">⇛ कल्याण पासिंग प्रूफ</h3>
         <div align="center" className="result fntsnm">
           <div>
             <div>&nbsp;</div>

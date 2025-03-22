@@ -53,7 +53,7 @@ function WorldResult() {
     const options = {
       hour: '2-digit',
       minute: '2-digit',
-      second: '2-digit',
+      //second: '2-digit',
       hour12: true,
     };
 
@@ -72,7 +72,7 @@ function WorldResult() {
     const options = {
       hour: '2-digit',
       minute: '2-digit',
-      second: '2-digit',
+      //second: '2-digit',
       hour12: true,
     };
 
@@ -93,7 +93,7 @@ function WorldResult() {
   return (
     <div className="world_result border_red_line">
       <Container>
-        <div className="section_header yellow_color">
+        <div className="section_header">
           ☔ WORLD ME SABSE FAST SATTA MATKA RESULT ☔
         </div>
         {gameData.length > 0 ? (
@@ -106,7 +106,7 @@ function WorldResult() {
             return (
               <div
                 key={game.$id}
-                className={`game_card  p-4 border-b border-red-600 text-center ${
+                className={`game_card p-2 border-b border-red-600 text-center ${
                   specialGames.includes(game.$id) ? 'bg_yellow_color' : ''
                 }`}
               >
@@ -116,22 +116,18 @@ function WorldResult() {
                       .replace(/\s+/g, '-')
                       .toLowerCase()}/jodi`}
                   >
-                    <Button className="button mr-3">Jodi</Button>
+                    <Button className="button mr-2">Jodi</Button>
                   </Link>
                 </div>
-                <div>
+                <div className='text-center'>
                   <h1 className="game_name text-xl font-bold">{game.title}</h1>
                   <h2 className="game_number text-xl font-bold">
                     {game.gamenumber || 'N/A'}
                   </h2>
-                  <div className="game_time flex gap-4">
-                    <span className="start_time end_time font-bold">
-                      {'('}
+                  <div className="game_time uppercase">
                       {formatStartTime(game.starttime)}
                       {' - '}
                       {formatEndTime(game.endtime)}
-                      {')'}
-                    </span>                   
                   </div>
                 </div>
                 <div>
@@ -140,7 +136,7 @@ function WorldResult() {
                       .replace(/\s+/g, '-')
                       .toLowerCase()}/panel`}
                   >
-                    <Button className="button mr-3">Panel</Button>
+                    <Button className="button mr-2">Panel</Button>
                   </Link>
                 </div>
               </div>

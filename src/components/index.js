@@ -4,8 +4,9 @@ import Header from "./Header.jsx";
 import Welcome from "./Welcome.jsx";
 import SattaMatka from "./SattaMatka.jsx";
 import SectionFour from "./SectionFour.jsx";
-import Notice from "./Notice.jsx";
 import LiveResult from "./LiveResult.jsx";
+import SectionFive from "./SectionFive.jsx";
+import Notice from "./Notice.jsx";
 import MainStarLine from "./MainStarLine.jsx";
 import SurayStarLine from "./SurayStarLine.jsx";
 import FastLiveResult from "./FastLiveResult.jsx";
@@ -29,6 +30,7 @@ export {
     SattaMatka,
     SectionFour,
     LiveResult,
+    SectionFive,
     Notice,
     WorldResult,
     MainStarLine,

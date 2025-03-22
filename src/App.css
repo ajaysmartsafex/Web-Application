@@ -37,9 +37,10 @@
 }
 
 .amthltg p {
-  animation: amthltg 20s linear infinite; 
-  margin-top: 20px;
-  color: #000b65;
+    animation: amthltg 10s linear infinite;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #000b65;
 }
 
 .amthltg p:hover {

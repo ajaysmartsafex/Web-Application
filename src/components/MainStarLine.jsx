@@ -4,10 +4,8 @@ import Container from './container/Container';
 const MainStarLine = () => {
   return (
     <Container>
-      <div className="table_container px-3 my-3">
-        <h3 className="charts_heading text-center py-2 font-semibold">
-          MAIN STARLINE
-        </h3>
+      <div className="table_container my-3">
+        <h3 className="charts_heading yellow_bg_color f_24">MAIN STARLINE</h3>
         <table className="text-center " width="100%" border="1">
           <thead>
             <tr>
