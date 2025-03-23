@@ -19,7 +19,7 @@ import MatkaJodiChart from "./MatkaJodiChart.jsx";
 import MatkaPanelChart from "./MatkaPanelChart.jsx";
 import Introduction from "./Introduction.jsx";
 import Footer from "./Footer.jsx";
-
+import EmailSupport from "./EmailSupport.jsx";
 import WorldResult from "./WorldResult.jsx";
 
 export {
@@ -33,6 +33,7 @@ export {
     SectionFive,
     Notice,
     WorldResult,
+    EmailSupport,
     MainStarLine,
     SurayStarLine,
     FastLiveResult,

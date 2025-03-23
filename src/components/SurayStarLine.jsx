@@ -5,7 +5,9 @@ const SurayStarLine = () => {
   return (
     <Container>
       <div className="table_container">
-        <h3 className="section_header f_22">SURYA STARLINE</h3>
+        <h3 className="section_header f_22">
+          Mumbai Rajshree Star Line Result
+        </h3>
         <table className="text-center " width="100%" border="1">
           <thead>
             <tr>

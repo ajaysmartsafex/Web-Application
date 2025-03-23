@@ -9,9 +9,10 @@ import {
   LiveResult,
   SectionFive,
   Notice,
+  EmailSupport,
   MainStarLine,
   SurayStarLine,
-  FastLiveResult,
+  // FastLiveResult,
   WeeklySection,
   KalyanSection,
   TableSection,
@@ -35,9 +36,10 @@ const Home = () => {
         <SectionFive />
         <Notice />
         <WorldResult />
+        <EmailSupport />
         <MainStarLine />
         <SurayStarLine />
-        <FastLiveResult />
+        {/* <FastLiveResult /> */}
         <WeeklySection />
         <KalyanSection />
         <TableSection />
