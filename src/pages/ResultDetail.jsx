@@ -121,6 +121,8 @@ const ResultDetail = () => {
             eightD: result.eightD || '*',
           };
 
+          
+
           // Prevent duplicate entries
           const isDuplicate = acc[weekKey].days[dayName].some(
             (existingEntry) =>
@@ -179,6 +181,36 @@ const ResultDetail = () => {
       top: 0,
       behavior: 'smooth',
     });
+  };
+
+  const addRedClass = (fourD, fiveD) => {
+    const specificPairs = [
+      ['1', '6'],
+      ['2', '7'],
+      ['3', '8'],
+      ['4', '9'],
+      ['5', '0'],
+      ['6', '1'],
+      ['7', '2'],
+      ['8', '3'],
+      ['9', '4'],
+      ['0', '5'],
+    ];
+
+    for (let pair of specificPairs) {
+      if (
+        (fourD === pair[0] && fiveD === pair[1]) ||
+        (fourD === pair[1] && fiveD === pair[0])
+      ) {
+        return 'specific_number';
+      }
+    }
+
+    if (fourD === fiveD) {
+      return 'specific_number';
+    }
+
+    return '';
   };
 
   return (
@@ -279,13 +311,28 @@ const ResultDetail = () => {
                               <div className="left-digits flex flex-col items-start pl-1">
                                 {data.days[day].map((entry, index) => (
                                   <div key={`left-${weekKey}-${day}-${index}`}>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.firstD}
                                     </p>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.secondD}
                                     </p>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.thirdD}
                                     </p>
                                   </div>
@@ -294,10 +341,20 @@ const ResultDetail = () => {
                               <div className="mid-digits font-bold flex items-center justify-center min-h-[60px]">
                                 {data.days[day].map((entry, index) => (
                                   <div key={`mid-${weekKey}-${day}-${index}`}>
-                                    <span className="f_24 font-bold none_itelic">
+                                    <span
+                                      className={`f_24 font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.fourD}
                                     </span>
-                                    <span className="f_24 font-bold none_itelic">
+                                    <span
+                                      className={`f_24 font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.fiveD}
                                     </span>
                                   </div>
@@ -306,13 +363,28 @@ const ResultDetail = () => {
                               <div className="right-digits flex flex-col items-end pr-1">
                                 {data.days[day].map((entry, index) => (
                                   <div key={`right-${weekKey}-${day}-${index}`}>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.sixD}
                                     </p>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.sevenD}
                                     </p>
-                                    <p className="text-sm font-bold none_itelic">
+                                    <p
+                                      className={`text-sm font-bold none_itelic ${addRedClass(
+                                        entry.fourD,
+                                        entry.fiveD
+                                      )}`}
+                                    >
                                       {entry.eightD}
                                     </p>
                                   </div>

@@ -180,6 +180,37 @@ const ResultJoid = () => {
     });
   };
 
+
+  const addRedClass = (fourD, fiveD) => {
+    const specificPairs = [
+      ['1', '6'],
+      ['2', '7'],
+      ['3', '8'],
+      ['4', '9'],
+      ['5', '0'],
+      ['6', '1'],
+      ['7', '2'],
+      ['8', '3'],
+      ['9', '4'],
+      ['0', '5'],
+    ];
+
+    for (let pair of specificPairs) {
+      if (
+        (fourD === pair[0] && fiveD === pair[1]) ||
+        (fourD === pair[1] && fiveD === pair[0])
+      ) {
+        return 'specific_number';
+      }
+    }
+ 
+    if (fourD === fiveD) {
+      return 'specific_number';
+    }
+
+    return ''; 
+  };
+
   return (
     <div className="jodi_chart">
       <Container>
@@ -274,10 +305,20 @@ const ResultJoid = () => {
                             <div className="mid-digits font-bold flex items-center justify-center py-1">
                               {data.days[day].map((entry, index) => (
                                 <div key={`mid-${weekKey}-${day}-${index}`}>
-                                  <span className="f_24 font-bold none_itelic">
+                                  <span
+                                    className={`f_24 font-bold none_itelic ${addRedClass(
+                                      entry.fourD,
+                                      entry.fiveD
+                                    )}`}
+                                  >
                                     {entry.fourD}
                                   </span>
-                                  <span className="f_24 font-bold none_itelic">
+                                  <span
+                                    className={`f_24 font-bold none_itelic ${addRedClass(
+                                      entry.fourD,
+                                      entry.fiveD
+                                    )}`}
+                                  >
                                     {entry.fiveD}
                                   </span>
                                 </div>
@@ -324,36 +365,36 @@ const ResultJoid = () => {
             existing ones changing. What may be considered the best for one
             person might not be the same for another. However, when it comes to
             DPBossess Services, almost all gamblers on the earth will usually
-            prefer this betting platform not only to play {userData.title} but also other
-            Satta Matka games
+            prefer this betting platform not only to play {userData.title} but
+            also other Satta Matka games
           </p>
           <br />
           <div className="small-heading">
             Get {userData.title} Jodi Chart Records
           </div>
           <p>
-            When you consider DPBossess Services to play the {userData.title} game, you do
-            not need to search for other analogous sites online. Most reputable
-            sources on the earth suggest gamblers choose this Satta Matka
-            website to play not only the {userData.title} game but also all other types
-            of Satta Matka games. Whatever variations you need to play your
-            favorite Satta Matka game, you will be capable of finding it easily
-            and quickly on DPBossess Services. Moreover, the only Satta Matka
-            website that has tons of positive feedback and customer reviews is
-            DPBossess Services. Thus, you can rest assured that the website can
-            meet your specific needs, criteria for security, game diversity,
-            bonuses, and customer backing
+            When you consider DPBossess Services to play the {userData.title}{' '}
+            game, you do not need to search for other analogous sites online.
+            Most reputable sources on the earth suggest gamblers choose this
+            Satta Matka website to play not only the {userData.title} game but
+            also all other types of Satta Matka games. Whatever variations you
+            need to play your favorite Satta Matka game, you will be capable of
+            finding it easily and quickly on DPBossess Services. Moreover, the
+            only Satta Matka website that has tons of positive feedback and
+            customer reviews is DPBossess Services. Thus, you can rest assured
+            that the website can meet your specific needs, criteria for
+            security, game diversity, bonuses, and customer backing
           </p>
           <br />
           <div className="faq-heading">Frequently Asked Questions (FAQs):</div>
           <p className="faq-title">
-            Q1: Can I Play my {userData.title} game on DPBossess Services from any part of
-            the world?
+            Q1: Can I Play my {userData.title} game on DPBossess Services from
+            any part of the world?
           </p>
           <p className="faq-ans">
-            Yes, you can because DPBossess Services provides its website users with
-            the convenience to play not only their {userData.title} game but also other
-            Satta Matka games from anywhere on earth.
+            Yes, you can because DPBossess Services provides its website users
+            with the convenience to play not only their {userData.title} game
+            but also other Satta Matka games from anywhere on earth.
           </p>
           <p className="faq-title">
             Q2: Why most gamplaers prefer DPBossess Services?

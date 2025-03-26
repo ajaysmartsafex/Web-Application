@@ -16,7 +16,12 @@
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.specific_number {
+    color: red;
+}
+.specific_number:only-child {
+  font-size: 20px; /* Font size for the '*' */
+}
 .red_color {
   color: #ff0016;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Container from './container/Container';
 
 const Footer = () => {
@@ -52,95 +51,11 @@ const Footer = () => {
         <div className="border_red_line">
           <Container>
             <p className="powerd_by text-sm text-center marun_color py-3">
-              © 2011 - 2025 dpbossess.com <br />
-              <Link
-                href="#"
-                className="py-2 text-xs grays_color"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                About us
-              </Link>{' '}
-              |
-              <Link
-                href="#"
-                className="py-2 text-xs grays_color"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contact us
-              </Link>
-              <br />
-              <Link
-                href="#"
-                className="py-2 text-xs grays_color"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Privacy &amp; policy
-              </Link>{' '}
-              |
-              <Link
-                href="#"
-                className="py-2 text-xs grays_color"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Term And Conditions
-              </Link>
+              © 2011 - 2025 dpbossess.com             
             </p>
           </Container>
         </div>
-        <div className="foote_cont text-center">
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            SITEMAP
-          </Link>
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DATE FIX
-          </Link>
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TERMS & CONDITION
-          </Link>
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PRIVACY POLICY
-          </Link>
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ABOUT US
-          </Link>
-          <Link
-            href="#"
-            className="py-2 text-2xl marun_color"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CONTACT
-          </Link>
-        </div>
+       
       </Container>
     </>
   );
