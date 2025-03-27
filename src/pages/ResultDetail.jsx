@@ -29,6 +29,13 @@ const ResultDetail = () => {
   const gameResults = useSelector((state) => state.results?.gameResults || []);
   const [groupedResults, setGroupedResults] = useState({});
 
+  const filteredDaysOfWeek =
+    gameName === 'main-bazar'
+      ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+      : ['kalyan', 'milan-night'].includes(gameName)
+      ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+      : daysOfWeek;
+
   const slugTransform = useCallback((value) => {
     if (value && typeof value === 'string') {
       return value
@@ -283,7 +290,7 @@ const ResultDetail = () => {
                   <th className="border border-gray-400 none_itelic py-1">
                     Date
                   </th>
-                  {daysOfWeek.map((day) => (
+                  {filteredDaysOfWeek.map((day) => (
                     <th
                       key={day}
                       className="border border-gray-400 none_itelic py-1"
@@ -298,10 +305,10 @@ const ResultDetail = () => {
                   <React.Fragment key={weekKey}>
                     <tr className="bg_transparent">
                       <td className="border border-gray-400 p-1 text-center none_itelic text-sm font-bold">
-                        {data.startDate.split('-').reverse().join('/')} <br />
-                        to <br /> {data.endDate.split('-').reverse().join('/')}
+                        {data.startDate} <br />
+                        To <br /> {data.endDate}
                       </td>
-                      {daysOfWeek.map((day) => (
+                      {filteredDaysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
                           className="border border-gray-400 text-center none_itelic"

@@ -29,6 +29,13 @@ const ResultJoid = () => {
   const gameResults = useSelector((state) => state.results?.gameResults || []);
   const [groupedResults, setGroupedResults] = useState({});
 
+  const filteredDaysOfWeek =
+    gameName === 'main-bazar'
+      ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+      : ['kalyan', 'milan-night'].includes(gameName)
+      ? ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+      : daysOfWeek;
+
   useEffect(() => {
     const fetchResults = async () => {
       try {
@@ -279,7 +286,7 @@ const ResultJoid = () => {
               <thead>
                 <tr className="thead">
                   {/* <th className="border border-gray-400 px-4 py-2">Date</th> */}
-                  {daysOfWeek.map((day) => (
+                  {filteredDaysOfWeek.map((day) => (
                     <th
                       key={day}
                       className="border border-gray-800 none_itelic py-1"
@@ -296,7 +303,7 @@ const ResultJoid = () => {
                       {/* <td className="border border-gray-400 px-4 py-2 font-bold text-center"> 
                         {data.startDate} <br /> to <br /> {data.endDate}
                       </td>*/}
-                      {daysOfWeek.map((day) => (
+                      {filteredDaysOfWeek.map((day) => (
                         <td
                           key={`${weekKey}-${day}`}
                           className="border border-gray-800 text-center max-w-16"
