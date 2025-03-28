@@ -9,6 +9,9 @@ const MatkaPanelChart = () => {
         <h3 className="section_header f_22">⇛ MATKA PANEL CHART</h3>
 
         <div className="font_semibold">
+          <Link to="/result/milan-morning/panel" className="lists_games">
+            Milan Morning Panel
+          </Link>
           <Link to="/result/surya/panel" className="lists_games">
             Surya Panel
           </Link>

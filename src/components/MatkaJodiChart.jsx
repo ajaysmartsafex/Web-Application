@@ -9,6 +9,9 @@ const MatkaJodiChart = () => {
         <h3 className="section_header f_22">⇛ MATKA JODI CHART</h3>
 
         <div className="font_semibold">
+          <Link to="/result/milan-morning/jodi" className="lists_games">
+            Milan Morning Chart
+          </Link>
           <Link to="/result/surya/jodi" className="lists_games">
             Surya Chart
           </Link>

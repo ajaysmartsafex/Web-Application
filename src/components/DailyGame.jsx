@@ -10,7 +10,7 @@ const DailyGame = () => {
 
         <div className="border_bottom font_semibold py-2">
           <Link to="#" className="text-xl blue_color">
-            ♣ Suryamatkaonline ♣
+            ♣ Dpbossess.com ♣
           </Link>
         </div>
         <div className="border_bottom font_semibold py-2">

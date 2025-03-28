@@ -37,12 +37,12 @@ const KalyanSection = () => {
             <div className="text-white font-semibold text-2xl text_shadow">
               बुकिंग करने के लिए संपर्क करें:-
               <br />
-              ♤ ADMIN SIR ♤<br />
+              ♤ ADMIN ♤<br />
             </div>
-            <div className="text-white font-semibold text-3xl text_shadow">
+            {/* <div className="text-white font-semibold text-3xl text_shadow">
               +919076916189
               <br />
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
